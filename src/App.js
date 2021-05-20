@@ -1,25 +1,26 @@
-import logo from './logo.svg';
-import './App.css';
+import React from 'react';
+import LoginForm from './components/LoginForm/LoginForm';
+import LoginArea from './components/LoginArea/LoginArea';
+import './App.css'
+import wallyRequest from './wallyRequests';
 
-function App() {
+
+
+export default function app() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <body className="body">
+        <div className="container-fluid">
+          <div className="row">
+            <div class="col">
+              <LoginArea />
+            </div>
+            <div class="col">
+              <LoginForm />
+            </div>
+          </div>
+        </div>
+      </body>
+    </>
   );
 }
-
-export default App;
