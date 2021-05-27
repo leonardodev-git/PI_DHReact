@@ -1,0 +1,51 @@
+.body {
+  background-color: #F2F2F2;
+  padding: 2% !important;
+  min-height: 100vh;
+}
+
+
+.cadastro {
+  display: flex;
+  justify-content: space-between;
+  margin: auto 10%;
+}
+
+.cadastro > span {
+  font-size: 1.5rem;
+}
+
+.box-form {
+  background-color: white;
+  border-radius: 10%;
+  border: 1px solid black;
+}
+
+input:nth-child(4), input:nth-child(6), input:nth-child(8)  {
+  margin: 0 auto;
+  width: 95%;
+}
+
+.form {
+  padding: 5%;
+}
+
+.logo {
+  width: 100px;
+  max-width: 100%;
+  margin: 2% 35%;
+}
+
+.btn-create {
+  width: 80%;
+  margin: 3% 10% !important;
+}
+.btn-account {
+  width: 80%;
+  margin: 3% 10% !important;
+}
+
+button > a {
+  color: black;
+  text-decoration: none;
+}
