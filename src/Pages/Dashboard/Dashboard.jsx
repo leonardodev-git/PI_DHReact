@@ -3,9 +3,14 @@ import barberShop from '../../Assets/barberShop.jpg'
 import logoBarber from '../../Assets/logotipo_barbershop.svg'
 import img from '../../Assets/imagem.png'
 import './Dashboard.css'
+import {UserContext} from '../../UserContext';
+import { useContext } from 'react'
 
 
-export default function dashboard() {
+
+export default function Dashboard() {
+  const context = useContext(UserContext);
+  console.log(context)
   return (
     <div className="body">
       <div class="container-fluid">
@@ -14,8 +19,8 @@ export default function dashboard() {
             <img src={client2} alt="perfil" className="perfil" />
             <div class="nav-info">
               <small class="boas-vindas">Bem vindo(a)!</small>
-              <h2 class="cliente">Nome do Cliente</h2>
-              <p class="email">Email do Cliente</p>
+              <h2 class="cliente">{context.usuario}</h2>
+              <p class="email">{context.email}</p>
               <ul class="list-group">
                 <li class="list-group-item nav-lista"><i class="fas fa-home menu"></i>Dashboard</li>
                 <li class="list-group-item nav-lista"><i class="fas fa-bell menu"></i>Notificações</li>
