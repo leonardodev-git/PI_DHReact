@@ -26,7 +26,7 @@ export default function ({isOpen, onClose, onUserUpdate}) {
   const onSubmit = async (e) => {
     e.preventDefault();
       const user = getCurrentUser()
-    const tokenRes = await fetch(`http://localhost:5000/users/delete`, {
+    const tokenRes = await fetch(`http://localhost:5000/users/update`, {
       method: 'PUT',
       headers: {
         'Content-Type': 'application/json',
@@ -34,29 +34,30 @@ export default function ({isOpen, onClose, onUserUpdate}) {
       },
       body: JSON.stringify(form),
     } )
-    
-    history.push('/dashboard');
+    const res = await tokenRes.json()
+    history.push('/login/dashboard');
     console.log(tokenRes)
+    console.log(res)
  
   }
 
-
+    console.log(form)
   return (
     <Modal isOpen={isOpen} onRequestClose={onClose}>
       <form onSubmit={onSubmit}>
           <div>
             <label htmlFor="">Email</label>
-            <input value={form.email} onChange={handleChange} name="email" />
+            <input type="email" id="email" value={form.email} onChange={handleChange} name="email" />
           </div>
 
           <div>
             <label htmlFor="">Nome</label>
-            <input value={form.nome} onChange={handleChange}  name="nome" />
+            <input type="text" id="nome" value={form.nome} onChange={handleChange}  name="nome" />
           </div>
 
           <div>
             <label htmlFor="">Sobrenome</label>
-            <input value={form.sobrenome} onChange={handleChange} name="sobrenome" />
+            <input type="text" id="sobrenome" value={form.sobrenome} onChange={handleChange} name="sobrenome" />
           </div>
 
 
