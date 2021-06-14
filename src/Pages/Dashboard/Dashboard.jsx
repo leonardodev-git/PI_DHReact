@@ -3,73 +3,151 @@ import barberShop from '../../Assets/barberShop.jpg'
 import logoBarber from '../../Assets/logotipo_barbershop.svg'
 import img from '../../Assets/imagem.png'
 import './Dashboard.css'
-import {UserContext} from '../../UserContext';
-import { useContext } from 'react'
+import { Link, useHistory } from 'react-router-dom';
+import { useEffect, useState } from 'react'
+import { FaHome } from 'react-icons/fa'
+import { FaHotjar }  from 'react-icons/fa'
+import { FaStar }  from 'react-icons/fa'
+import UserModal from '../../components/EventsModal/UserModal'
 
 
 
 export default function Dashboard() {
-  const context = useContext(UserContext);
-  console.log(context)
+  const [professional, setProfessional] = useState([])
+  const [showinfo, setshowInfo] = useState(false)
+  const [error, setError] = useState('')
+  const [modalOpen, setModalOpen] = useState();
+
+  let history = useHistory();
+
+  const getCurrentUser = () => {
+    return JSON.parse(localStorage.getItem("Token"));
+  };
+  const user = getCurrentUser()
+
+  useEffect(() => {
+    setshowInfo(true)
+  }, [professional]);
+
+  useEffect(() => {
+     getProfessional()
+  }, []);
+
+ function onUserUpdate () {
+
+ }
+
+  async function getProfessional () {
+    const user = getCurrentUser()
+ 
+    const tokenRes = await fetch("http://localhost:5000/profissionals/all/", {
+           method: 'GET',
+           headers: {
+          'Content-Type': 'application/json',
+           'x-access-token' : user.acessToken
+        }
+    
+  });
+    const content = await tokenRes.json();
+    setProfessional(content.allProfissionals)
+  }
+
+  async function handleDelete () {
+    const user = getCurrentUser()
+    const tokenRes = await fetch(`http://localhost:5000/users/delete`, {
+      method: 'DELETE',
+      headers: {
+        'Content-Type': 'application/json',
+        'x-access-token' : user.acessToken
+      },
+    } )
+    const success = await tokenRes.json()
+    setError(success.message)
+    setTimeout(() => history.push('/'), 5000);    
+  }
+
+  
+
+
+
+  function logOut () {
+    localStorage.removeItem('Token')
+  }
+  
   return (
     <div className="body">
-      <div class="container-fluid">
-        <div class="row">
-          <div class="col-2 navProfile">
-            <img src={client2} alt="perfil" className="perfil" />
-            <div class="nav-info">
-              <small class="boas-vindas">Bem vindo(a)!</small>
-              <h2 class="cliente">{context.usuario}</h2>
-              <p class="email">{context.email}</p>
-              <ul class="list-group">
-                <li class="list-group-item nav-lista"><i class="fas fa-home menu"></i>Dashboard</li>
-                <li class="list-group-item nav-lista"><i class="fas fa-bell menu"></i>Notificações</li>
-                <li class="list-group-item nav-lista"><i class="fas fa-cog menu"></i>Preferências</li>
+     <div className="container-fluid">
+        <div className="row">
+          <div className="col-2 navProfile">
+            <img src={client2} alt="perfil" className="foto-perfil" />
+            <div className="nav-info">
+              <small className="boas-vindas">Bem vindo(a)!</small>
+              {error}
+              <h2 className="cliente">{user.user}</h2>
+              <p className="email">{user.email}</p>
+              <ul className="list-group">
+                <li className="nav-lista"><button className="buttonDash"><FaHome />Dashboard</button></li>
+                <li className="nav-lista"><button className="buttonDash" onClick={() => setModalOpen(true)}><FaHotjar />Alterar dados</button> </li>
+               <li className="nav-lista"> <button className="buttonDash" onClick={handleDelete}><FaStar/>Deletar Conta</button></li>
               </ul>
+              <UserModal isOpen={modalOpen} onClose={() => setModalOpen(false)} onUserUpdate={(e) => onUserUpdate(e)} />
+              <button className="exitButton" onClick={logOut}>
+                <Link className="exitLink" to="/" >Sair</Link>
+              </button>
             </div>
           </div>
-          <div class="col-7 px-lg-4">
-            <div class="row barberInfo">
-              <div class="col ">
-                <img src={barberShop} alt="barberShop" class="barbershop"></img>
+          <div className="col-7 px-lg-4">
+            <div className="row barberInfo">
+              <div className="col ">
+                <img src={barberShop} alt="barberShop" className="barbershop"></img>
               </div>
-              <div class="col">
-                <img src={logoBarber} alt="logoBarber" class="barberLogo"></img>
-                <p class="welcome">
+              <div className="col">
+                <img src={logoBarber} alt="logoBarber" className="barberLogo"></img>
+                <p className="welcome">
                   A Barbershop é uma barbearia com mais de 12 anos de serviços prestados e pode contar com os
                   melhores
                   profissionais de São Paulo para te atender.
                 </p>
-                <p class="welcome">
+                <p className="welcome">
                   Avenida Sapopemba, 1020 | São Paulo - SP | Atendimento das 9h às 21h.
                 </p>
-                <button type="button" class="btn btn-warning btn-plus">Entrar em contato</button>
+                <button type="button" className="btn btn-warning btn-plus">Entrar em contato</button>
 
               </div>
             </div>
-            <div class="row disponiveis">
-              <h2 class="prof">Profissionais Disponíveis</h2>
+            <div className="row disponiveis">
+              <h2 className="prof">Profissionais Disponíveis</h2>
+           
             </div>
-            <div class="row justify-content-around profissionais">
-
-              <div class="col-4 professionalSchedule">
-                <img src={img} alt="perfil" class="fotoPerfil"></img>
-                <p class="h5">
-                  Nome do Barbeiro
-                    </p>
-                <p>
-                  Especialidade do Barbeiro
-                    </p>
-                <button type="button" class="btn btn-warning input-agenda"> <a
-                  href="#">Verificar agenda</a></button>
-
-              </div>
+            <div className="row justify-content-around profissionais">
+              {showinfo && (
+                professional.map((data, i) => {
+                  return (
+                    <div className="col-4 professionalSchedule" key={i}>
+                    <img src={img} alt="perfil" className="fotoPerfil"></img>
+                    <p className="h5">
+                     {data.nome}
+                        </p>
+                    <p>
+                      Especialidade do Barbeiro
+                        </p>
+                    <button type="button" className="btn btn-warning input-agenda"> <a
+                      href="#">Verificar agenda</a></button>
+    
+                  </div> 
+                  )
+                })
+        
+              )}
+              
 
             </div>
           </div>
           <div class="col-3 agendamentos">
             <p class="h2 tituloAgendamento">Meus Agendamentos</p>
             <p class="h5 date">Amanhã</p>
+
+            <div className="mostly-customized-scrollbar">
             <div class="row">
               <div class="col lista-agendamento">
                 <p class="service">Corte Simples</p>
@@ -112,9 +190,10 @@ export default function Dashboard() {
               </div>
             </div>
 
+
           </div>
         </div>
-
+        </div>
       </div>
     </div>
   )

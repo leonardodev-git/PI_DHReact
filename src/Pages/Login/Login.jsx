@@ -1,79 +1,100 @@
-import React, { useContext } from "react";
+import React, { useState } from "react";
 import img from "../../Assets/ilustracao.svg";
 import logo from "../../Assets/Logo.svg";
-import useForm from "../../Hooks/UseForm";
-import { UserContext } from '../../UserContext';
+import {TOKEN_POST } from '../../api'
+import { useHistory } from "react-router-dom";
+
 import "./Login.css";
 
 export default function Login() {
-  const userEmail = useForm();
-  const userPassword = useForm();
+  const [form, setForm] = useState({
+    email: '',
+    senha: ''
+  })
+  let history = useHistory();
 
-  const {userLogin} = useContext(UserContext)
 
- async function loginSubimt(e) {
-    e.preventDefault();
-    userLogin(email.value, senha.value)
+
+
+  const handleSubmit = (e) => {
+    e.preventDefault()
+  setForm(data =>
+    ({
+      ...data,
+      [e.target.name]: e.target.value
+    })
+    )
 }
 
+ async function loginSubmit(e) {
+    e.preventDefault();
+    const { url, options } = TOKEN_POST(form);
+    const tokenRes = await fetch(url, options);
+    const content = await tokenRes.json();
+    
+    localStorage.setItem(
+       'Token', JSON.stringify(content)
+    );
+
+    history.push('/login/dashboard');
+}
 
   return (
     <div className="body">
-      <div class="container">
-        <div class="row">
-          <div class="col-7 texto">
+      <div className="container">
+        <div className="row">
+          <div className="col-7 texto">
             <h1>Seja bem-vindo!</h1> <br></br>
             <br></br>
-            <img class="ilustra" src={img} alt="Ilustração"></img>
+            <img className="ilustra" src={img} alt="Ilustração"></img>
           </div>
-          <div class="col-5 mw-100 div-form box-form">
-            <div class="form form-login">
-              <div class="cadastro">
+          <div className="col-5 mw-100 div-form box-form">
+            <div className="form form-login">
+              <div className="cadastro">
                 <span>Login</span>
               </div>
-              <form onSubmit={loginSubimt} method="POST">
-                <div class="row">
+              <form onSubmit={loginSubmit}>
+                <div className="row">
                   <small
                     id="passwordHelpBlock"
-                    class="form-text text-muted descricao"
+                    className="form-text text-muted descricao"
                   >
                     Endereço de e-mail
                   </small>
                   <input
                     type="email"
-                    class="form-control"
+                    className="form-control"
                     name="email"
                     placeholder="Endereço de email"
-                    value={userEmail.value}
-                    onChange={userEmail.handleChange}
+                    onChange={handleSubmit}
                  
                   />
                   <small
                     id="passwordHelpBlock"
-                    class="form-text text-muted descricao"
+                    className="form-text text-muted descricao"
                   >
                     Senha
                   </small>
                   <input
                     type="password"
-                    class="form-control"
+                    className="form-control"
                     name="senha"
                     placeholder="Senha"
-                    value={userPassword.value}
-                    onChange={userPassword.handleChange}
+                    onChange={handleSubmit}
                   />
                   <small
                     id="passwordHelpBlock"
-                    class="form-text text-muted descricao"
+                    className="form-text text-muted descricao"
                   >
                     Manter Logado
                     <input type="checkbox" name="lembreLogado" />
                   </small>
                   <div>
-                    <button type="submit" class="btn btn-warning">
-                      Efetuar login
-                    </button>
-                    <img src={logo} alt="logo do site" class="logo" />
+                    <button type="submit" className="btn btn-warning"  >
+                      Efetuar login                     
+                                                     
+                     </button>
+                    <img src={logo} alt="logo do site" className="logo" />
                   </div>
                 </div>
               </form>

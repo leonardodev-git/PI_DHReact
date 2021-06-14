@@ -1,31 +1,82 @@
-import './Calendar.css'
-import client2 from '../../Assets/cliente-2.png'
-import img from '../../Assets/imagem.png'
-import FullCalendar from '@fullcalendar/react'
-import dayGridPlugin from '@fullcalendar/daygrid'
-import imgCarrousel1 from '../../Assets/Carrousel-1.png'
-import imgCarrousel2 from '../../Assets/Carrousel-2.png'
-import imgCarrousel3 from '../../Assets/Carrousel-3.png'
-import imgCarrousel4 from '../../Assets/Carrousel-4.png'
+import './Calendar.css';
+import client2 from '../../Assets/cliente-2.png';
+import img from '../../Assets/imagem.png';
+import FullCalendar from '@fullcalendar/react';
+import dayGridPlugin from '@fullcalendar/daygrid';
+import interactionPlugin from "@fullcalendar/interaction";
+import imgCarrousel1 from '../../Assets/Carrousel-1.png';
+import imgCarrousel2 from '../../Assets/Carrousel-2.png';
+import imgCarrousel3 from '../../Assets/Carrousel-3.png';
+import imgCarrousel4 from '../../Assets/Carrousel-4.png';
+import { useRef, useState } from 'react';
+import EventsModal from '../../components/EventsModal/EventsModal';
+import { Link } from 'react-router-dom';
+import moment from 'moment';
+import { FaHome } from 'react-icons/fa'
+import { FaHotjar }  from 'react-icons/fa'
+import { FaStar }  from 'react-icons/fa'
 
 
-export default function calendar() {
+
+export default function Calendar() {
+  const [modalOpen, setModalOpen] = useState();
+  const calendarRef = useRef(null);
+
+  const getCurrentUser = () => {
+    return JSON.parse(localStorage.getItem("Token"));
+  };
+  const user = getCurrentUser()
+
+
+  const onEventAdded = e => {
+    let calendarApi = calendarRef.current.getApi();
+    calendarApi.addEvent({
+      start: moment(e.start).toDate(),
+      end: moment(e.end).toDate(),
+      title: e.title,
+    })
+  }
+
+  async function handleEnventAdd(data) {
+    const tokenRes = await fetch('rota que será criada para os agendamentos', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify()
+    } );
+  }
+
+  async function handleDataSet(data) {
+    const tokenRes = await fetch('rota que será criada para os agendamentos', {
+      method: 'GET',
+      headers: {
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify()
+    } );
+  }
+
+
   return (
 
     <div className="body">
       <div class="container-fluid">
         <div className="row">
           <div className="col-2 navProfile">
-            <img src={client2} alt="perfil" className="perfil" />
+          <img src={client2} alt="perfil" className="foto-perfil" />
             <div class="nav-info">
               <small class="boas-vindas">Bem vindo(a)!</small>
-              <h2 class="cliente">Nome do Cliente</h2>
-              <p class="email">Email do Cliente</p>
+              <h2 className="cliente">{user.user}</h2>
+              <p className="email">{user.email}</p>
               <ul class="list-group">
-                <li class="list-group-item nav-lista"><i class="fas fa-home menu"></i>Dashboard</li>
-                <li class="list-group-item nav-lista"><i class="fas fa-bell menu"></i>Notificações</li>
-                <li class="list-group-item nav-lista"><i class="fas fa-cog menu"></i>Preferências</li>
+              <li className="nav-lista"><FaHome />     Dashboard</li>
+                <li className="nav-lista"><FaHotjar /> Notificações</li>
+                <li className="nav-lista"><FaStar/> Preferências</li>
               </ul>
+              <button className="exitButton">
+                <Link className="exitLink" to="/" >Sair</Link>
+              </button>
             </div>
           </div>
           <div className="col-10 px-lg-4">
@@ -34,8 +85,8 @@ export default function calendar() {
                 <img src={img} alt="barberShop" class="profilePhoto"></img>
                 <h4>Mariana Silva</h4>
                 <small className="especialidade">Especialista em corte</small>  <br></br>
-                <button type="button" class="btn btn-warning input-maior"> <a
-                  href="/dash/<%=barbeiro.id %>/checkout">Agendar</a>
+                <button type="button" className="btn btn-warning input-maior"> <a
+                  href="/login/dashboard/confirmed">Agendar</a>
                 </button>
               </div>
               <div className="col carrousel-professional">
@@ -61,15 +112,20 @@ export default function calendar() {
             </div>
             <div className="row schedule-area">
               <div className="col-8">
+                <button onClick={() => setModalOpen(true)} className="btn-schedule">Faça seu agendamento</button>
+                <div style={{position: "relative", zIndex: 0}}>
                 <FullCalendar
-                  plugins={[dayGridPlugin]}
+                  ref={calendarRef}
+                  plugins={[ dayGridPlugin, interactionPlugin ]}
                   initialView="dayGridMonth"
                   weekends={false}
-                  events={[
-                    { title: 'event 1', date: '2021-05-25' },
-                    { title: 'event 2', date: '2019-04-02' }]}
-                />
-              </div>
+                  eventAdd={(e) => handleEnventAdd(e)}
+                 
+                 />
+                 </div>
+
+                <EventsModal isOpen={modalOpen} onClose={() => setModalOpen(false)} onEventAdded={(e) => onEventAdded(e)} />
+              </div> 
               <div className="col-4 ScheduleList">
                 <h3 className="Schedule-title">Agendamentos</h3>
                 <div className="lista-agendamento-callendar">

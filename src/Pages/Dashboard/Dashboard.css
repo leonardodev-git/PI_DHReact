@@ -1,5 +1,5 @@
 .body {
-  background-color: #F2F2F2;
+  background-color: #f2f2f2;
   box-sizing: border-box;
   padding: 10px !important;
 }
@@ -9,6 +9,49 @@
   color: white;
   margin: 0%;
   border-radius: 30px;
+}
+
+.nav-list {
+  background: #1e1e1e;
+  color: #ffffff;
+  font-size: 15px;
+  font-style: italic;
+  justify-content: center;
+  text-align: center;
+  padding: 5px 2px;
+  margin: 20px 20px 0 5px;
+  border-radius: 5px;
+}
+
+li {
+  list-style-type: none;
+  padding: 10px 0px;
+  background-color: #1e1e1e;
+  border: 1px solid white;
+  border-radius: 10px;
+  margin: 10px 0px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.nav-lista:hover {
+  background: #ffc100;
+  color: black;
+  font-size: 18px;
+  margin: 10px 0px;
+  cursor: pointer;
+  border-radius: 10px;
+}
+
+.nav-lista > i {
+  padding-right: 20px;
+}
+
+.foto-perfil {
+  width: 130px;
+  margin-top: 30%;
+  max-width: 100%;
+  border-radius: 50%;
 }
 
 .perfil {
@@ -32,6 +75,7 @@
   height: 100%;
   max-width: 100%;
   border-radius: 5%;
+  object-fit: cover;
 }
 
 .barberLogo {
@@ -67,16 +111,60 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  
 }
 
 .lista-agendamento {
-  background-color:hsla(050,100%,50%,0.3);
+  background-color: hsla(050, 100%, 50%, 0.3);
   margin: 25px;
   border-radius: 30px;
 }
 
 .btnDeletar {
-  background-color: #FFC100;
+  background-color: #ffc100;
   width: 100px;
+}
+
+.exitButton {
+  background-color: black;
+  border: none;
+  padding-top: 270%;
+}
+
+.exitLink {
+  color: white;
+  align-self: flex-end;
+}
+
+.email {
+  padding: 10px 0px;
+  text-align: center;
+}
+
+.cliente {
+  padding: 10px 0px;
+  text-align: center;
+}
+
+/* SCroll-bar Meus agendamentos */
+.mostly-customized-scrollbar {
+  display: block;
+  overflow-y: auto;
+  height: 35em;
+}
+
+.mostly-customized-scrollbar::-webkit-scrollbar {
+  width: 6px;
+  height: 0;
+  background-color: #aaa;
+}
+
+.mostly-customized-scrollbar::-webkit-scrollbar-thumb {
+  background: #ffc100;
+  border-radius: 5px;
+}
+
+.buttonDash {
+  border: none;
+  background: none;
+  color: white;
 }
