@@ -39,7 +39,7 @@ export default function Index() {
   return (
     <div className="body">
       <div className="container">
-        <div className="row">
+        <div className="row flex-wrap">
           <div className="col-7 welcome">
             <h1>Seja bem-vindo!</h1> <br></br>
             <p>
@@ -48,62 +48,92 @@ export default function Index() {
             </p>
             <img className="ilustra" src={ilustracao} alt="Illustração"></img>
           </div>
-          <div className="col-5  mw-100 div-form div-res">
+          <div className="col-5 mw-100 div-form div-res">
             <div>
               <div className="cadastro">
                 <span className="cadastro">Cadastre-se</span>
                 {/*<span>Login</span>*/}
               </div>
               <form onSubmit={userSubmit} autoComplete="off">
-              <div className="row res-row">
+                <div className="row res-row">
                   <div className="col formulario">
                     <small id="passwordHelpBlock" className="descricao">
                       Nome
                     </small>
-                    <input type="text" id="nome" name="nome" className="form-control" placeholder="Nome" value={form.nome} onChange={handleChange} />
-                    </div>
+                    <input
+                      type="text"
+                      id="nome"
+                      name="nome"
+                      className="form-control input-nome"
+                      placeholder="Nome"
+                      value={form.nome}
+                      onChange={handleChange}
+                    />
+                  </div>
                   <div className="col">
                     <small id="passwordHelpBlock" className="descricao">
                       Sobrenome
                     </small>
-                    <input type="text" id="sobrenome" name="sobrenome" class="form-control input-menor" placeholder="Sobrenome" value={form.sobrenome}onChange={handleChange} />
-                    </div>
-                  <small
-                    id="passwordHelpBlock"
-                    className="form-text text-muted descricao"
-                  >
+                    <input
+                      type="text"
+                      id="sobrenome"
+                      name="sobrenome"
+                      className="form-control input-sobrenome"
+                      placeholder="Sobrenome"
+                      value={form.sobrenome}
+                      onChange={handleChange}
+                    />
+                  </div>
+                  <small id="passwordHelpBlock" className="form-text text-muted descricao">
                     Endereço de e-mail
                   </small>
-                  <input type="email" id="email" name="email" className="form-control" placeholder="E-mail" aria-describedby="passwordHelpBlock" value={form.email} onChange={handleChange} />
-                  <small
-                    id="passwordHelpBlock"
-                    className="form-text text-muted descricao"
-                  >
+                  <input
+                    type="email"
+                    id="email"
+                    name="email"
+                    className="form-control input-maior"
+                    placeholder="E-mail"
+                    aria-describedby="passwordHelpBlock"
+                    value={form.email}
+                    onChange={handleChange}
+                  />
+                  <small id="passwordHelpBlock" className="form-text text-muted descricao">
                     Senha
                   </small>
-                  <input type="password" name="senha" id="senha" class="form-control" placeholder="Senha" aria-describedby="passwordHelpBlock" value={form.senha} onChange={handleChange} />
-                  <small
-                    id="passwordHelpBlock"
-                    className="form-text text-muted descricao"
-                  >
+                  <input
+                    type="password"
+                    name="senha"
+                    id="senha"
+                    className="form-control input-maior"
+                    placeholder="Senha"
+                    aria-describedby="passwordHelpBlock"
+                    value={form.senha}
+                    onChange={handleChange}
+                  />
+                  <small id="passwordHelpBlock" className="form-text text-muted descricao">
                     Confirmar senha
                   </small>
-                  <input type="password" id="confirmarSenha" name="confirmarSenha" class="form-control" placeholder=" Confirmar senha" aria-describedby="passwordHelpBlock" value={form.confirmarSenha} onChange={handleChange} />
+                  <input
+                    type="password"
+                    id="confirmarSenha"
+                    name="confirmarSenha"
+                    className="form-control input-maior"
+                    placeholder=" Confirmar senha"
+                    aria-describedby="passwordHelpBlock"
+                    value={form.confirmarSenha}
+                    onChange={handleChange}
+                  />
                   <div className="buttons">
                     <button type="submit" class="btn btn-warning btn-create">
                       Criar nova conta
                     </button>
-                    <button type="text" class="btn btn-warning btn-account">
+                    <button type="text" class="btn btn-warning btn-create">
                       <a href="/login">Já tenho conta</a>
                     </button>
                   </div>
 
                   <div className="logo">
-                    <img
-                      src={logo}
-                      alt="logo do site"
-                      className="logotipo"
-                    ></img>
+                    <img src={logo} alt="logo do site" className="logotipo logo-res"></img>
                   </div>
                 </div>
               </form>
@@ -112,5 +142,5 @@ export default function Index() {
         </div>
       </div>
     </div>
-  );
+  )
 }
