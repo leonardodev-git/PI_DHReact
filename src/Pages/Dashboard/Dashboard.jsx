@@ -132,7 +132,7 @@ export default function Dashboard() {
                       Especialidade do Barbeiro
                         </p>
                     <button type="button" className="btn btn-warning input-agenda"> <a
-                      href="#">Verificar agenda</a></button>
+                      href="/login/dashboard/calendar">Verificar agenda</a></button>
     
                   </div> 
                   )

@@ -36,12 +36,8 @@ export default function ({isOpen, onClose, onUserUpdate}) {
     } )
     const res = await tokenRes.json()
     history.push('/login/dashboard');
-    console.log(tokenRes)
-    console.log(res)
- 
   }
 
-    console.log(form)
   return (
     <Modal isOpen={isOpen} onRequestClose={onClose}>
       <form onSubmit={onSubmit}>
@@ -61,7 +57,7 @@ export default function ({isOpen, onClose, onUserUpdate}) {
           </div>
 
 
-          <button>Concluir Alterações</button>
+          <button><a href="/login/dashboard">Concluir Alterações</a></button>
       </form>
     </Modal>
   )
