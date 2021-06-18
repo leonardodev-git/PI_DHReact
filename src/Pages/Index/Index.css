@@ -31,7 +31,6 @@ p {
   display: flex;
   justify-content: center;
   margin-top: 10px;
-  margin-left: 100px;
 }
 
 .cadastro>span {
@@ -122,7 +121,10 @@ button>a {
   display: block;
 }
 
-/*Responsividade*/
+
+
+
+/*Responsividade Mobile*/
 
 @media(max-width: 500px) {
   .body {
@@ -147,50 +149,50 @@ button>a {
     padding-top: 10px;
   }
 
-
-  h1,
-  p {
+  h1.titulo {
     display: flex;
     text-align: center;
-    width: 225px;
+    font-size: 30px;
+    width: 350px;
     margin-left: 20px;
   }
 
-  p {
-    font-size: 16px;
+  p.mobile-p {
+    display: flex;
+    text-align: center;
+    width: 250px;
+    margin-left: 10px;
   }
 
-  .res-row {
+  span.cad-mobile {
+    font-size: 16px;
+    text-align: center;
+    font-size: 20px;
+    margin: auto;
+    padding: auto;
+  }
+  
+  .mob-row {
     display: flex;
     justify-content: center;
-    width: 480px; 
-  }
-
-  
+    padding-right: 225px;
+  }  
 
   .div-res {
     display: flex;
     background-color: #F2F2F2;
-    max-width: 20%;
+    max-width: 50%;
     border-radius: none;
     border: none;
   }
 
-  .welcome {
-    display: block;
-    max-width: 100% !important;
-    margin: 50% 20% 0;
-    padding-top: 10px;
-  }
-
-  .cadastro {
+  span.cad-mobile {
     display: flex;
     justify-content: center;
-    width: 240px;
+    width: 200px;    
+    margin-right: 200px;
     padding-bottom: 5px;
   }
-
-
 
   .ilustra {
     display: none;
@@ -230,3 +232,91 @@ button>a {
     height: 120px !important;
   }
 }
+
+
+
+/* Responsivo - Tablet */ 
+@media (max-width : 768px) {
+  .body {
+    display: flex;
+    background-color: #F2F2F2;
+    align-items: center;
+    overflow: hidden;
+  }
+
+  .div-res {
+    display: block;
+    background-color: #F2F2F2;
+    max-width: 20%;
+    border-radius: none;
+    border: none;
+  }
+
+  .welcome {
+    display: block;
+    max-width: 100% !important;
+    margin: 50% 20% 0;
+    padding-top: 10px;
+  }
+
+  .title-tablet {
+    font-size: 45px;
+    width: 340px;
+    margin-left: 40px;
+  }
+
+   .cad-tablet {
+     display: flex;
+     justify-content: center;
+     margin-left: 160px;
+     width: 350px;
+     padding-bottom: 5px;
+   }
+
+   .p-tablet {
+     display: flex;
+     text-align: center;
+     font-size: 16px;
+     width: 250px;
+     margin-left: 80px;
+   }
+
+   .tabres-row {
+     display: flex;
+     justify-content: center;
+     width: 650px;
+     padding-left: 50px;
+     
+   }
+
+   .ilustra {
+     display: none;
+   }
+
+
+
+   
+
+
+
+
+
+
+ 
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+}
+
+

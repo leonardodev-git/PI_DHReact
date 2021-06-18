@@ -41,8 +41,8 @@ export default function Index() {
       <div className="container">
         <div className="row flex-wrap">
           <div className="col-7 welcome">
-            <h1>Seja bem-vindo!</h1> <br></br>
-            <p>
+            <h1 className="titulo title-tablet">Seja bem-vindo!</h1> <br></br>
+            <p className="mobile-p p-tablet">
               Antes de tudo, efetue seu login. <br></br>
               Caso você ainda não possua um cadastro, pode criar um!
             </p>
@@ -50,12 +50,12 @@ export default function Index() {
           </div>
           <div className="col-5 mw-100 div-form div-res">
             <div>
-              <div className="cadastro">
-                <span className="cadastro">Cadastre-se</span>
+              <div className="cadastro cad-mobile cad-tablet">
+                <span className="cadastro cad-mobile cad-tablet">Cadastre-se</span>
                 {/*<span>Login</span>*/}
               </div>
               <form onSubmit={userSubmit} autoComplete="off">
-                <div className="row res-row">
+                <div className="row mob-row  tabres-row">
                   <div className="col formulario">
                     <small id="passwordHelpBlock" className="descricao">
                       Nome
