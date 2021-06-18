@@ -184,6 +184,8 @@ button>a {
 
   .cadastro {
     display: flex;
+    justify-content: center;
+    width: 250px;
     padding-bottom: 5px;
   }
 
