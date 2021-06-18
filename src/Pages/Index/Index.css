@@ -159,9 +159,13 @@ button>a {
     font-size: 16px;
   }
 
-  .row {
+  .res-row {
     display: flex;
+    justify-content: center;
+    width: 480px; 
   }
+
+  
 
   .div-res {
     display: flex;
