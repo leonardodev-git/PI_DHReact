@@ -152,6 +152,7 @@ button>a {
   p {
     display: flex;
     text-align: center;
+    width: 225px;
     margin-left: 20px;
   }
 
@@ -185,9 +186,11 @@ button>a {
   .cadastro {
     display: flex;
     justify-content: center;
-    width: 250px;
+    width: 240px;
     padding-bottom: 5px;
   }
+
+
 
   .ilustra {
     display: none;
