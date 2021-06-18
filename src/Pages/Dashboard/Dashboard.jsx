@@ -54,7 +54,7 @@ export default function Dashboard() {
 
   async function handleDelete () {
     const user = getCurrentUser()
-    const tokenRes = await fetch(`http://localhost:5000/users/delete`, {
+    const tokenRes = await fetch(`http://localhost:5000/users`, {
       method: 'DELETE',
       headers: {
         'Content-Type': 'application/json',

@@ -26,7 +26,7 @@ export default function ({isOpen, onClose, onUserUpdate}) {
   const onSubmit = async (e) => {
     e.preventDefault();
       const user = getCurrentUser()
-    const tokenRes = await fetch(`http://localhost:5000/users/update`, {
+    const tokenRes = await fetch(`http://localhost:5000/users`, {
       method: 'PUT',
       headers: {
         'Content-Type': 'application/json',
