@@ -8,7 +8,7 @@ import { useEffect, useState } from 'react'
 import { FaHome } from 'react-icons/fa'
 import { FaHotjar }  from 'react-icons/fa'
 import { FaStar }  from 'react-icons/fa'
-import UserModal from '../../components/EventsModal/UserModal'
+import UserModal from '../../components/UserModal/UserModal'
 
 
 
@@ -79,7 +79,7 @@ export default function Dashboard() {
      <div className="container-fluid">
         <div className="row">
           <div className="col-2 navProfile">
-            <img src={client2} alt="perfil" className="foto-perfil" />
+            <img src={client2} alt="perfil" className="foto-perfil border-profile"/>
             <div className="nav-info">
               <small className="boas-vindas">Bem vindo(a)!</small>
               {error}
@@ -158,6 +158,7 @@ export default function Dashboard() {
                 </div>
               </div>
             </div>
+
             <div class="row">
               <div class="col lista-agendamento">
                 <p class="service">Corte Simples</p>
@@ -168,6 +169,7 @@ export default function Dashboard() {
                 </div>
               </div>
             </div>
+
             <p class="h5">9 de março</p>
             <div class="row">
               <div class="col lista-agendamento">
@@ -179,6 +181,7 @@ export default function Dashboard() {
                 </div>
               </div>
             </div>
+
             <div class="row">
               <div class="col lista-agendamento">
                 <p class="service">Corte Simples</p>

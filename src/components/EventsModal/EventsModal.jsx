@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import Modal from 'react-modal';
 import Datetime from 'react-datetime';
+import './EventsModal.css';
 
 
 export default function ({isOpen, onClose, onEventAdded}) {
@@ -21,22 +22,28 @@ export default function ({isOpen, onClose, onEventAdded}) {
 
 
   return (
-    <Modal isOpen={isOpen} onRequestClose={onClose}>
+    <Modal isOpen={isOpen} onRequestClose={onClose} className="corpo">
       <form onSubmit={onSubmit}>
-          <input placeholder="Agendamento" value={title} onChange={e => setTitle(e.target.value)} /> 
+        <div className="form-ajust">
+          <h1 className="agendar">Agendar serviço!</h1>
+          <input
+            className="serviço"
+            placeholder="Agendamento"
+            value={title}
+            onChange={(e) => setTitle(e.target.value)}
+          />
 
           <div>
             <label htmlFor="">Data Inicial</label>
-            <Datetime value={start} onChange={ date => setStart(date)} />
+            <Datetime value={start} onChange={(date) => setStart(date)} className="serviço" />
           </div>
 
           <div>
             <label htmlFor="">Data Final</label>
-            <Datetime value={end} onChange={ date => setEnd(date)} />
+            <Datetime value={end} onChange={(date) => setEnd(date)} className="serviço" />
           </div>
-
-
-          <button>Concluir Agendamento</button>
+          <button className="concluir">Concluir Agendamento</button>
+        </div>
       </form>
     </Modal>
   )
