@@ -1,18 +1,47 @@
 .body {
-  background-color: #f2f2f2;
+  display: block;
+  background-color: #F2F2F2;
   box-sizing: border-box;
-  padding: 10px !important;
+  padding: 2px !important;
+  overflow: hidden;
 }
 
-.navProfile {
+div .navProfile {
+  display: block;
+  width: 15%;
   background-color: black;
-  color: white;
-  margin: 0%;
-  border-radius: 30px;
+  color: #FFC100;
+  margin-left: -3%;
+  margin-top: -5%;
+  margin-bottom: -30%;
+  padding-top: 80px;
+  padding-bottom: 60px;
+  padding-left: 35px;
+  border-radius: 10px;
+  z-index: 20;
 }
 
-.nav-list {
-  background: #1e1e1e;
+.boas-vindas {
+  display: flex;
+  margin-top: 32px;
+  font-size: 18px;
+}
+
+.cliente {
+  display: flex;
+  margin: 5px 10px 0 0;
+  font-size: 27px;
+}
+
+.email {
+  display: flex;
+  font-size: 12px;
+}
+
+/*Menu Nav da dash */
+
+.nav-lista {
+  background: #1E1E1E;
   color: #ffffff;
   font-size: 15px;
   font-style: italic;
@@ -25,25 +54,19 @@
 
 li {
   list-style-type: none;
-  padding: 10px 0px;
-  background-color: #1e1e1e;
-  border: 1px solid white;
-  border-radius: 10px;
-  margin: 10px 0px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-.nav-lista:hover {
-  background: #ffc100;
-  color: black;
-  font-size: 18px;
-  margin: 10px 0px;
-  cursor: pointer;
-  border-radius: 10px;
 }
 
-.nav-lista > i {
+.nav-lista:hover {
+  background: #FFC100;
+  color: black;
+  font-size: 15px;
+  padding: 5px 2px;
+  margin: 20px 20px 0 5px;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.nav-lista>i {
   padding-right: 20px;
 }
 
@@ -54,37 +77,66 @@ li {
   border-radius: 50%;
 }
 
-.perfil {
-  width: 100px;
-  margin: 25%;
-  max-width: 100%;
-}
+/* Topo da tela */
 
 .barberInfo {
-  padding: 25px;
+  width: 100%;
+  height: 40%;
+  padding: 10px;
   background-color: white;
-  border-radius: 30px;
+  border-radius: 10px;
 }
 
-.welcome {
-  font-size: 0.8rem;
+/* foto da barbearia */
+
+.row {
+  display: none;
 }
 
 .barbershop {
-  width: 100%;
-  height: 100%;
-  max-width: 100%;
+  display: flex;
+  margin-top: -35px;
+  width: 300px;
+  height: 265%;
   border-radius: 5%;
-  object-fit: cover;
 }
 
-.barberLogo {
-  width: 100px;
+.shopBarbe {
+  display: flex;
+  padding: 50px auto;
 }
+
+ /* /\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\\ */
+
+ .logoBarbe {
+   display: block;
+   max-width: 100px;
+   margin: 0 400px;
+ }
+
+ .barberLogo {
+   width: 100px;
+ }
+
+ p.welcome {
+   display: flex;
+   font-size: 0.8rem;
+   text-align: left;
+   margin: 0 60px 0 0;
+   padding: 20px 43px 0 15px;
+   margin-bottom: 30px;
+ }
+
+ .disponiveis {
+   padding: 20px;
+ }
+
+/*Final da Dahsboard*/
 
 .agendamentos {
   background-color: white;
-  border-radius: 30px;
+  height: 10%;
+  border-radius: 10px;
 }
 
 .tituloAgendamento {
@@ -97,16 +149,61 @@ li {
 }
 
 .professionalSchedule {
-  background-color: white;
+  display: block;
+  grid-gap: 5px 20px;
+  background-color: #ffffff;
+  margin: 50px auto;
+  max-width: 250px !important;
+  height: 270px;
+  padding: 10px;
+  border-radius: 5%;
+}
+
+.especialidade {
+  text-align: center;
+}
+
+.input-agenda {
+  display: flex;
+  background-color: #FFC100;
+  color: #000000;
+  justify-content: center;
+  width: 185px;
+  height: 40px;
+  margin: 12px 25px;
+  padding-top: 7px;
+  border-radius: 10px;
+  text-decoration: none;
+}
+
+.input-agenda:hover {
+  display: flex;
+  background-color: #000000;
+  color: #FFC100;
+  justify-content: center;
+  width: 185px;
+  height: 40px;
+  margin: 12px 25px;
+  padding-top: 7px;
+  border-radius: 10px;
+  text-decoration: none;
 }
 
 .fotoPerfil {
+  margin-top: 10px;
+  margin-bottom: 10px;
   width: 100px;
+  border: 3px solid #FFC100;
+  border-radius: 50%;
 }
+
 .fotoAgendamento {
   width: 50px;
   height: 50px;
+  border: 3px solid #FFC100;
+  border-radius: 50%;
 }
+
 .detalhe {
   display: flex;
   justify-content: space-between;
@@ -114,35 +211,9 @@ li {
 }
 
 .lista-agendamento {
-  background-color: hsla(050, 100%, 50%, 0.3);
+  background-color: #FFF2B2;
   margin: 25px;
-  border-radius: 30px;
-}
-
-.btnDeletar {
-  background-color: #ffc100;
-  width: 100px;
-}
-
-.exitButton {
-  background-color: black;
-  border: none;
-  padding-top: 270%;
-}
-
-.exitLink {
-  color: white;
-  align-self: flex-end;
-}
-
-.email {
-  padding: 10px 0px;
-  text-align: center;
-}
-
-.cliente {
-  padding: 10px 0px;
-  text-align: center;
+  border-radius: 15px;
 }
 
 /* SCroll-bar Meus agendamentos */
@@ -152,19 +223,77 @@ li {
   height: 35em;
 }
 
-.mostly-customized-scrollbar::-webkit-scrollbar {
-  width: 6px;
-  height: 0;
-  background-color: #aaa;
+ .mostly-customized-scrollbar::-webkit-scrollbar {
+   width: 6px;
+   height: 0;
+   background-color: #aaa;
+ }
+
+ .mostly-customized-scrollbar::-webkit-scrollbar-thumb {
+   background: #FFC100;
+   border-radius: 5px;
+ }
+
+ .input-agendamento {
+   background-color: #000000;
+   color: #FFC100;
+   height: 45px;
+   border-radius: 10px;
+   margin-bottom: 15px;
+ }
+
+ .input-agendamento:hover {
+   background-color: #FFC100;
+   color: #000000;
+   height: 45px;
+   border-radius: 10px;
+   margin-bottom: 15px;
+ }
+
+ .contact {
+   display: block;
+   background-color: #FFC100;
+   color: #000000;
+   justify-content: center;
+   width: 185px;
+   height: 40px;
+   margin-left: 180px;
+   padding: 7px;
+   border-radius: 10px;
+   text-decoration: none;
+   z-index: 20;
+ }
+
+ .contact:hover {
+   display: block;
+   background-color: #000000;
+   color: #FFC100;
+   justify-content: center;
+   width: 185px;
+   height: 40px;
+   margin-left: 180px;
+   padding: 7px;
+   border-radius: 10px;
+   text-decoration: none;
+   z-index: 20;
+ }
+
+.logout {
+  padding: 200px 30px 0 0;
+  color: #FFC100;
+  text-decoration: none;
 }
 
-.mostly-customized-scrollbar::-webkit-scrollbar-thumb {
-  background: #ffc100;
-  border-radius: 5px;
+.logout:hover {
+  padding: 200px 30px 0 0;
+  color: #ffffff;
+  text-decoration: none;
 }
 
-.buttonDash {
-  border: none;
-  background: none;
-  color: white;
+/* Responsivo da Dash 01 */
+
+@media(max-width: 500px) {
+
 }
+
+

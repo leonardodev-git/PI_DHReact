@@ -3,7 +3,6 @@ import img from "../../Assets/ilustracao.svg";
 import logo from "../../Assets/Logo.svg";
 import {TOKEN_POST } from '../../api'
 import { useHistory } from "react-router-dom";
-
 import "./Login.css";
 
 export default function Login() {

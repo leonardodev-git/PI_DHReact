@@ -1,4 +1,3 @@
-
 .corpo {
      display: flex;
      justify-content: center;     
@@ -78,10 +77,10 @@
      background-color: #000000;
      color: #FFC100;
      justify-content: center;
-     width: 500px;
+     width: 425px;
      height: 40px;
-     margin-left: 50px;     
-     padding-top: 7px;     
+     margin: none;
+     padding-top: 7px;
      border-radius: 10px;
      text-decoration: none;
 }
@@ -91,9 +90,9 @@
      background-color: #FFC100;
      color: #000000;
      justify-content: center;
-     width: 500px;
+     width: 425px;
      height: 40px;
-     margin-left: 50px;     
+     margin: none;
      padding-top: 7px;
      border-radius: 10px;
      text-decoration: none;

@@ -60,34 +60,45 @@ export default function Calendar() {
 
 
   return (
-
     <div className="body">
       <div class="container-fluid">
         <div className="row">
           <div className="col-2 navProfile">
-          <img src={client2} alt="perfil" className="foto-perfil" />
+            <img src={client2} alt="perfil" className="foto-perfil" />
             <div class="nav-info">
               <small class="boas-vindas">Bem vindo(a)!</small>
               <h2 className="cliente">{user.user}</h2>
               <p className="email">{user.email}</p>
               <ul class="list-group">
-              <li className="nav-lista"><FaHome />     Dashboard</li>
-                <li className="nav-lista"><FaHotjar /> Notificações</li>
-                <li className="nav-lista"><FaStar/> Preferências</li>
+                <li className="nav-lista">
+                  <button className="buttonDash fa fa-home fa-fw  menu">Dashboard</button>
+                </li>
+                <li className="nav-lista">
+                  <button className="buttonDash fa fa-cog fa-fw  menu">Alterar dados</button>
+                </li>
+                <li className="nav-lista">
+                  <button className="buttonDash fa fa-bell fa-fw  menu">
+                    Deletar Conta
+                  </button>
+                </li>
               </ul>
               <button className="exitButton">
-                <Link className="exitLink" to="/" >Sair</Link>
+                <Link className="exitLink" to="/">
+                  Sair
+                </Link>
               </button>
             </div>
           </div>
+
           <div className="col-10 px-lg-4">
             <div className="row  carrousel">
               <div className="col carrousel-professional">
                 <img src={img} alt="barberShop" class="profilePhoto"></img>
                 <h4>Mariana Silva</h4>
-                <small className="especialidade">Especialista em corte</small>  <br></br>
-                <button type="button" className="btn btn-warning input-maior"> <a
-                  href="/login/dashboard/confirmed">Agendar</a>
+                <small className="especialidade">Especialista em corte</small> <br></br>
+                <button type="button" className="btn btn-warning input-maior">
+                  {' '}
+                  <a href="/login/dashboard/confirmed">Agendar</a>
                 </button>
               </div>
               <div className="col carrousel-professional">
@@ -113,20 +124,25 @@ export default function Calendar() {
             </div>
             <div className="row schedule-area">
               <div className="col-8">
-                <button onClick={() => setModalOpen(true)} className="btn-schedule">Faça seu agendamento</button>
-                <div style={{position: "relative", zIndex: 0}}>
-                <FullCalendar
-                  ref={calendarRef}
-                  plugins={[ dayGridPlugin, interactionPlugin ]}
-                  initialView="dayGridMonth"
-                  weekends={false}
-                  eventAdd={(e) => handleEnventAdd(e)}
-                 
-                 />
-                 </div>
+                <button onClick={() => setModalOpen(true)} className="btn-schedule">
+                  Faça seu agendamento
+                </button>
+                <div style={{ position: 'relative', zIndex: 0 }}>
+                  <FullCalendar
+                    ref={calendarRef}
+                    plugins={[dayGridPlugin, interactionPlugin]}
+                    initialView="dayGridMonth"
+                    weekends={false}
+                    eventAdd={(e) => handleEnventAdd(e)}
+                  />
+                </div>
 
-                <EventsModal isOpen={modalOpen} onClose={() => setModalOpen(false)} onEventAdded={(e) => onEventAdded(e)} />
-              </div> 
+                <EventsModal
+                  isOpen={modalOpen}
+                  onClose={() => setModalOpen(false)}
+                  onEventAdded={(e) => onEventAdded(e)}
+                />
+              </div>
               <div className="col-4 ScheduleList">
                 <h3 className="Schedule-title">Agendamentos</h3>
                 <div className="lista-agendamento-callendar">
@@ -134,7 +150,9 @@ export default function Calendar() {
                   <p class="service">08:00-08:30 AM</p>
                   <div class="detalhe">
                     <img src={img} alt="" class="fotoAgendamento"></img>
-                    <button type="button" class="btn btn-warning btnDeletar">Deletar</button>
+                    <button type="button" class="btn btn-warning btnDeletar">
+                      Deletar
+                    </button>
                   </div>
                 </div>
                 <div className="lista-agendamento-callendar">
@@ -142,7 +160,9 @@ export default function Calendar() {
                   <p class="service">08:00-08:30 AM</p>
                   <div class="detalhe">
                     <img src={img} alt="" class="fotoAgendamento"></img>
-                    <button type="button" class="btn btn-warning btnDeletar">Deletar</button>
+                    <button type="button" class="btn btn-warning btnDeletar">
+                      Deletar
+                    </button>
                   </div>
                 </div>
                 <div className="lista-agendamento-callendar">
@@ -150,7 +170,9 @@ export default function Calendar() {
                   <p class="service">08:00-08:30 AM</p>
                   <div class="detalhe">
                     <img src={img} alt="" class="fotoAgendamento"></img>
-                    <button type="button" class="btn btn-warning btnDeletar">Deletar</button>
+                    <button type="button" class="btn btn-warning btnDeletar">
+                      Deletar
+                    </button>
                   </div>
                 </div>
               </div>
@@ -158,8 +180,6 @@ export default function Calendar() {
           </div>
         </div>
       </div>
-
     </div>
-
   )
 }
