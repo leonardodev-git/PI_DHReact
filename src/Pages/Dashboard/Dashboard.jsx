@@ -90,25 +90,27 @@ export default function Dashboard() {
               <p className="email">{user.email}</p>
               <ul className="list-group">
                 <li className="nav-lista">
-                  <button className="buttonDash fa fa-home fa-fw  menu">Dashboard</button>
+                  <button className=" fa fa-home fa-fw  menu">Dashboard</button>
                 </li>
                 <li className="nav-lista">
-                  <button className="buttonDash fa fa-cog fa-fw  menu" onClick={() => setModalOpen(true)}>
+                  <button className=" fa fa-cog fa-fw  menu" onClick={() => setModalOpen(true)}>
                     Alterar dados
                   </button>{' '}
                 </li>
                 <li className="nav-lista">
-                  <button className="buttonDash fa fa-bell fa-fw  menu" onClick={handleDelete}>
+                  <button className=" fa fa-bell fa-fw  menu" onClick={handleDelete}>
                     Deletar Conta
                   </button>
                 </li>
               </ul>
               <UserModal isOpen={modalOpen} onClose={() => setModalOpen(false)} onUserUpdate={(e) => onUserUpdate(e)} />
-              <button className="logout" onClick={logOut}>
-                <Link className="fas fa-sign-out-alt logout" to="/">
-                  Sair
-                </Link>
-              </button>
+              <div className="button-sair">
+                <button className="logout" onClick={logOut}>
+                  <Link to="/">
+                    <p>Sair</p>
+                  </Link>
+                </button>
+              </div>
             </div>
           </div>
 
@@ -154,9 +156,7 @@ export default function Dashboard() {
                       <p className="especialidade">Especialidade do Barbeiro</p>
                       <button className="input-agenda" type="button">
                         {' '}
-                        <a href="/login/dashboard/calendar">
-                          Verificar agenda
-                        </a>
+                        <a href="/login/dashboard/calendar">Verificar agenda</a>
                       </button>
                     </div>
                   )
@@ -252,7 +252,7 @@ export default function Dashboard() {
                     </button>
                   </div>
                 </div>
-              </div>     
+              </div>
             </div>
           </div>
         </div>

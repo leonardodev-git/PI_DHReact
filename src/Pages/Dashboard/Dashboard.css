@@ -1,5 +1,5 @@
 .body {
-  display: block;
+  display: flex;
   background-color: #F2F2F2;
   box-sizing: border-box;
   padding: 2px !important;
@@ -19,6 +19,7 @@ div .navProfile {
   padding-left: 35px;
   border-radius: 10px;
   z-index: 20;
+  
 }
 
 .boas-vindas {
@@ -40,30 +41,107 @@ div .navProfile {
 
 /*Menu Nav da dash */
 
-.nav-lista {
+.menu {
+  width: 50px;
+  height: 50px;
+  justify-content: center;
   background: #1E1E1E;
   color: #ffffff;
-  font-size: 15px;
-  font-style: italic;
-  justify-content: center;
-  text-align: center;
-  padding: 5px 2px;
-  margin: 20px 20px 0 5px;
+  font-size: 20px;    
+  text-align: center;    
+  border-radius: 5px;
+  
+}
+
+.list-group {
+  margin-top: 200px;
+}
+
+.button-sair {
+  margin-top: 500px;
+}
+
+.menu:hover {
+  width: 50px;
+  height: 50px;
+  background: #FFC100;
+  color: black;
+  font-size: 20px;
+  text-align: center;  
+  cursor: pointer;
   border-radius: 5px;
 }
+
+.fa-fw {
+  width: 80% !important;
+  justify-content: center; 
+  background: #1E1E1E;
+  color: #ffffff;
+  margin: 20px 5px 0 5px;
+  border: none;
+}
+
+.logout {
+  width: 60% !important;
+  height: 35px;
+  justify-content: center;
+  text-align: center;
+  margin-top: 20px;  
+  padding: 2px auto;
+  background-color: rgb(224, 224, 224);
+  color: #FFC100;
+  border-radius: 10px;  
+  text-decoration: none;
+}
+
+.logout:hover {
+  width: 60% !important;
+  height: 35px;
+  justify-content: center;
+  text-align: center;
+  padding: 2px auto;
+  background-color: #FFC100;
+  color: black;
+  text-decoration: none;
+}
+
+
+.logout p {
+  width: 60% !important;
+  height: 35px;
+  justify-content: center;
+  text-align: center;
+  padding: 2px 0 0 35px;  
+  border-radius: 10px;
+  text-decoration: none;
+}
+
+.logout p:hover {
+  width: 60% !important;
+  height: 35px;
+  justify-content: center;
+  text-align: center;
+  padding: 2px auto;  
+  text-decoration: none;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Acaba aqui o menu */ 
 
 li {
   list-style-type: none;
-}
-
-.nav-lista:hover {
-  background: #FFC100;
-  color: black;
-  font-size: 15px;
-  padding: 5px 2px;
-  margin: 20px 20px 0 5px;
-  cursor: pointer;
-  border-radius: 5px;
 }
 
 .nav-lista>i {
@@ -81,7 +159,7 @@ li {
 
 .barberInfo {
   width: 100%;
-  height: 40%;
+  height: 18%;
   padding: 10px;
   background-color: white;
   border-radius: 10px;
@@ -278,17 +356,16 @@ li {
    z-index: 20;
  }
 
-.logout {
-  padding: 200px 30px 0 0;
-  color: #FFC100;
-  text-decoration: none;
-}
 
-.logout:hover {
-  padding: 200px 30px 0 0;
-  color: #ffffff;
-  text-decoration: none;
-}
+
+
+
+
+
+
+
+
+
 
 /* Responsivo da Dash 01 */
 
