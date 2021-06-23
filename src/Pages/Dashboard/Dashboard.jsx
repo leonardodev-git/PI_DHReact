@@ -4,75 +4,80 @@ import logoBarber from '../../Assets/logotipo_barbershop.svg'
 import prof1 from '../../Assets/funcionarios/alexandre-cunha.png'
 import prof2 from '../../Assets/funcionarios/alvaro-dias.png'
 import prof3 from '../../Assets/funcionarios/jennifer-suzan.png'
-import img from '../../Assets/imagem.png'
 import './Dashboard.css'
-import { Link, useHistory } from 'react-router-dom';
+import { Link, useHistory } from 'react-router-dom'
 import { useEffect, useState } from 'react'
-import { FaHome } from 'react-icons/fa'
-import { FaHotjar }  from 'react-icons/fa'
-import { FaStar }  from 'react-icons/fa'
 import UserModal from '../../components/UserModal/UserModal'
-
-
 
 export default function Dashboard() {
   const [professional, setProfessional] = useState([])
   const [showinfo, setshowInfo] = useState(false)
   const [error, setError] = useState('')
-  const [modalOpen, setModalOpen] = useState();
+  const [modalOpen, setModalOpen] = useState()
 
-  let history = useHistory();
+  let history = useHistory()
 
   const getCurrentUser = () => {
-    return JSON.parse(localStorage.getItem("Token"));
-  };
+    return JSON.parse(localStorage.getItem('Token'))
+  }
   const user = getCurrentUser()
 
   useEffect(() => {
     setshowInfo(true)
-  }, [professional]);
+  }, [professional])
 
   useEffect(() => {
-     getProfessional()
-  }, []);
+    getProfessional()
+  }, [])
 
- function onUserUpdate () {
-
- }
-
-  async function getProfessional () {
+  async function getProfessional() {
     const user = getCurrentUser()
- 
-    const tokenRes = await fetch("http://localhost:5000/profissionals/all/", {
-           method: 'GET',
-           headers: {
-          'Content-Type': 'application/json',
-           'x-access-token' : user.acessToken
-        }
-    
-  });
-    const content = await tokenRes.json();
+
+    const tokenRes = await fetch('http://localhost:5000/profissionals/all/', {
+      method: 'GET',
+      headers: {
+        'Content-Type': 'application/json',
+        'x-access-token': user.acessToken,
+      },
+    })
+    const content = await tokenRes.json()
     setProfessional(content.allProfissionals)
   }
 
-  async function handleDelete () {
+  async function handleDelete() {
     const user = getCurrentUser()
     const tokenRes = await fetch(`http://localhost:5000/users`, {
       method: 'DELETE',
       headers: {
         'Content-Type': 'application/json',
-        'x-access-token' : user.acessToken
+        'x-access-token': user.acessToken,
       },
-    } )
+    })
     const success = await tokenRes.json()
     setError(success.message)
-    setTimeout(() => history.push('/'), 5000);    
+    setTimeout(() => history.push('/'), 5000)
   }
-  function logOut () {
+
+  async function getProfessionalID(id) {
+    const user = getCurrentUser()
+
+    const getProfessionalId = await fetch(`http://localhost:5000/profissionals/${id}`, {
+      method: 'GET',
+      headers: {
+        'Content-Type': 'application/json',
+        'x-access-token': user.acessToken,
+      },
+    })
+    const content = await getProfessionalId.json()
+    localStorage.setItem('Professional', JSON.stringify(content.professionalDetails))
+    history.push('/login/dashboard/calendar')
+  }
+
+  function logOut() {
     localStorage.removeItem('Token')
   }
-  
-  
+
+
   return (
     <div className="body">
       <div className="container-fluid">
@@ -99,7 +104,7 @@ export default function Dashboard() {
                   </button>
                 </li>
               </ul>
-              <UserModal isOpen={modalOpen} onClose={() => setModalOpen(false)} onUserUpdate={(e) => onUserUpdate(e)} />
+              <UserModal isOpen={modalOpen} onClose={() => setModalOpen(false)} />
               <div className="button-sair">
                 <button className="logout" onClick={logOut}>
                   <Link to="/">
@@ -152,9 +157,8 @@ export default function Dashboard() {
                       <img src={data.avatar} alt="perfil" className="fotoPerfil"></img>
                       <h5>{data.nome}</h5>
                       <p className="especialidade">Especialidade do Barbeiro</p>
-                      <button className="input-agenda" type="button">
-                        {' '}
-                        <a href="/login/dashboard/calendar">Verificar agenda</a>
+                      <button className="input-agenda" type="button" onClick={() => getProfessionalID(data.id)}>
+                        Verificar agenda
                       </button>
                     </div>
                   )

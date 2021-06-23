@@ -9,7 +9,7 @@ export default function ({isOpen, onClose, onEventAdded}) {
   const [start, setStart] = useState(new Date());
   const [end, setEnd] = useState(new Date());
 
-  const onSubmit = (e) => {
+  const onSubmit =  (e) => {
     e.preventDefault();
       onEventAdded({
         title,
