@@ -14,7 +14,7 @@ export default function ({isOpen, onClose, onUserUpdate}) {
   let history = useHistory();
 
   function handleChange({target}) {
-    const {id, value } = target;
+    const { id, value } = target;
     setForm({...form, [id]: value}) 
 } 
 

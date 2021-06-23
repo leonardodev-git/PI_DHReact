@@ -44,7 +44,7 @@ export default function confirm() {
               <div class="row">
                 <p className="h2 nome">Mariana Silva</p>
                 <small className="nome">Serviço Agendado</small>
-                <button type="submit" className="btn btn-warning confirmed">Corte Simples <br></br> <strong>11 de Agosto de 2020</strong>  <br></br> <strong>07:00-07:30 AM</strong></button>
+                <button type="submit" className="btn btn-warning confirmed">Corte Simples <br/> <strong>11 de Agosto de 2020</strong>  <br/> <strong>07:00-07:30 AM</strong></button>
 
                 <p className="nome">Total R$20,50</p>
                 <p className="nome">Descontos - R$10,00</p>

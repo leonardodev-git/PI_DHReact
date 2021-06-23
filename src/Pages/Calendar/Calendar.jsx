@@ -122,31 +122,31 @@ export default function Calendar() {
           <div className="col-10 px-lg-4">
             <div className="row  carrousel">
               <div className="col carrousel-professional">
-                <img src={professionalDetails.avatar} alt="barberShop" class="profilePhoto"></img>
+                <img src={professionalDetails.avatar} alt='barberShop' class='profilePhoto'/>
                 <h4> {professionalDetails.nome}</h4>
-                <small className="especialidade">Especialista em {professionalDetails.servicos[0]}</small> <br></br>
+                <small className="especialidade">Especialista em {professionalDetails.servicos[0]}</small> <br/>
                 <button type="button" className="btn btn-warning input-maior">
                   {' '}
                   <a href="/login/dashboard/confirmed">Confirmar</a>
                 </button>
               </div>
               <div className="col carrousel-professional">
-                <img src={imgCarrousel1} alt="carousel" class="carousel-img"></img>
+                <img src={imgCarrousel1} alt='carousel' class='carousel-img'/>
                 <p>Corte Total</p>
                 <small>Corte simples de cabelo com remoção total dos fios</small>
               </div>
               <div className="col carrousel-professional">
-                <img src={imgCarrousel2} alt="carousel" class="carousel-img"></img>
+                <img src={imgCarrousel2} alt='carousel' class='carousel-img'/>
                 <p>Corte Simples</p>
                 <small>Corte simples de cabelo com remoção total dos fios</small>
               </div>
               <div className="col carrousel-professional">
-                <img src={imgCarrousel3} alt="carousel" class="carousel-img"></img>
+                <img src={imgCarrousel3} alt='carousel' class='carousel-img'/>
                 <p>Corte na Tesoura</p>
                 <small>Corte simples de cabelo com remoção total dos fios</small>
               </div>
               <div className="col carrousel-professional">
-                <img src={imgCarrousel4} alt="carousel" class="carousel-img"></img>
+                <img src={imgCarrousel4} alt='carousel' class='carousel-img'/>
                 <p>Corte Complexo</p>
                 <small>Corte simples de cabelo com remoção total dos fios</small>
               </div>
@@ -178,7 +178,7 @@ export default function Calendar() {
                   <p class="service">Corte Simples</p>
                   <p class="service">08:00-08:30 AM</p>
                   <div class="detalhe">
-                    <img src={img} alt="" class="fotoAgendamento"></img>
+                    <img src={img} alt='' class='fotoAgendamento'/>
                     <button type="button" class="btn btn-warning btnDeletar">
                       Deletar
                     </button>
@@ -188,7 +188,7 @@ export default function Calendar() {
                   <p class="service">Corte Simples</p>
                   <p class="service">08:00-08:30 AM</p>
                   <div class="detalhe">
-                    <img src={img} alt="" class="fotoAgendamento"></img>
+                    <img src={img} alt='' class='fotoAgendamento'/>
                     <button type="button" class="btn btn-warning btnDeletar">
                       Deletar
                     </button>
@@ -198,7 +198,7 @@ export default function Calendar() {
                   <p class="service">Corte Simples</p>
                   <p class="service">08:00-08:30 AM</p>
                   <div class="detalhe">
-                    <img src={img} alt="" class="fotoAgendamento"></img>
+                    <img src={img} alt='' class='fotoAgendamento'/>
                     <button type="button" class="btn btn-warning btnDeletar">
                       Deletar
                     </button>
