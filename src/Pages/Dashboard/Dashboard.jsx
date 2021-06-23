@@ -1,9 +1,15 @@
 import client2 from '../../Assets/cliente-2.png'
 import barberShop from '../../Assets/barberShop.jpg'
 import logoBarber from '../../Assets/logotipo_barbershop.svg'
-import prof1 from '../../Assets/funcionarios/alexandre-cunha.png'
-import prof2 from '../../Assets/funcionarios/alvaro-dias.png'
-import prof3 from '../../Assets/funcionarios/jennifer-suzan.png'
+import prof1 from '../../Assets/funcionarios/julia-ramos.jpg'
+import prof2 from '../../Assets/funcionarios/jonas-lobo.jpg'
+import prof3 from '../../Assets/funcionarios/leonardo-magalhaes.jpg'
+import prof4 from '../../Assets/funcionarios/bruno-guedes.jpg'
+import prof5 from '../../Assets/funcionarios/pedro-braga.jpg'
+import prof6 from '../../Assets/funcionarios/joao-marcos.jpg'
+import prof7 from '../../Assets/funcionarios/guilherme-totoli.jpg'
+import prof8 from '../../Assets/funcionarios/renato-napoli.jpg'
+import prof9 from '../../Assets/funcionarios/eduardo-amorim.jpg'
 import './Dashboard.css'
 import { Link, useHistory } from 'react-router-dom'
 import { useEffect, useState } from 'react'
@@ -165,19 +171,19 @@ export default function Dashboard() {
                 })}
             </div>
           </div>
-          <div class="col-3 agendamentos">
-            <p class="h2 tituloAgendamento">Meus Agendamentos</p>
-            <p class="h5 date">Amanhã</p>
+          <div className="col-3 agendamentos">
+            <p className="h2 tituloAgendamento">Meus Agendamentos</p>
+            <p className="tomorrow">Amanhã</p>
 
             <div className="mostly-customized-scrollbar">
               {/*<span>Agendamento 1</span>*/}
-              <div class="row">
-                <div class="col lista-agendamento">
-                  <p class="service">Corte Simples</p>
-                  <p class="service">08:00-08:30 AM</p>
-                  <div class="detalhe">
-                    <img src={prof1} alt="" class="fotoAgendamento"></img>
-                    <button type="button" class="input-agendamento">
+              <div className="row">
+                <div className="col lista-agendamento">
+                  <p className="service">Corte Simples</p>
+                  <p className="service">08:00-08:30 AM</p>
+                  <div className="detalhe">
+                    <img src={prof1} alt="" className="fotoAgendamento"></img>
+                    <button type="button" className="input-agendamento">
                       Cancelar agendamento
                     </button>
                   </div>
@@ -185,9 +191,9 @@ export default function Dashboard() {
               </div>
 
               {/*<span>Agendamento 2</span>*/}
-              <div class="row">
-                <div class="col lista-agendamento">
-                  <p class="service">Corte Simples</p>
+              <div className="row">
+                <div className="col lista-agendamento">
+                  <p className="service">Corte Simples</p>
                   <p class="service">08:00-08:30 AM</p>
                   <div class="detalhe">
                     <img src={prof2} alt="" class="fotoAgendamento"></img>
@@ -199,7 +205,7 @@ export default function Dashboard() {
               </div>
 
               {/*<span>Agendamento 3</span>*/}
-              <p class="h5">9 de março</p>
+              <p className="day-month">9 de março</p>
               <div class="row">
                 <div class="col lista-agendamento">
                   <p class="service">Corte Simples</p>
@@ -214,13 +220,13 @@ export default function Dashboard() {
               </div>
 
               {/*<span>Agendamento 4</span>*/}
-              <p className="h5">10 de março</p>
+              <p className="day-month">10 de março</p>
               <div class="row">
                 <div class="col lista-agendamento">
                   <p class="service">Corte Simples</p>
                   <p class="service">08:00-08:30 AM</p>
                   <div class="detalhe">
-                    <img src={prof3} alt="" class="fotoAgendamento"></img>
+                    <img src={prof4} alt="" class="fotoAgendamento"></img>
                     <button type="button" class="input-agendamento">
                       Cancelar agendamento
                     </button>
@@ -228,13 +234,13 @@ export default function Dashboard() {
                 </div>
               </div>
               {/*<span>Agendamento 5</span>*/}
-              <p className="h5">11 de março</p>
+              <p className="day-month">11 de março</p>
               <div className="row">
                 <div className="col lista-agendamento">
                   <p className="service">Corte Simples</p>
                   <p class="service">08:00-08:30 AM</p>
                   <div className="detalhe">
-                    <img src={prof3} alt="" className="fotoAgendamento"></img>
+                    <img src={prof5} alt="" className="fotoAgendamento"></img>
                     <button type="button" className="input-agendamento">
                       Cancelar agendamento
                     </button>
@@ -242,41 +248,55 @@ export default function Dashboard() {
                 </div>
               </div>
               {/*<span>Agendamento 6</span>*/}
-              <p className="h5">12 de março</p>
+              <p className="day-month">12 de março</p>
               <div className="row">
                 <div className="col lista-agendamento">
                   <p className="service">Corte Simples</p>
                   <p class="service">08:00-08:30 AM</p>
                   <div className="detalhe">
-                    <img src={prof3} alt="" className="fotoAgendamento"></img>
+                    <img src={prof6} alt="" className="fotoAgendamento"></img>
                     <button type="button" className="input-agendamento">
                       Cancelar agendamento
                     </button>
                   </div>
                 </div>
               </div>
-              {/*<span>Agendamento 6</span>*/}
-              <p className="h5">12 de março</p>
+              {/*<span>Agendamento 7</span>*/}
+              <p className="day-month">13 de março</p>
               <div className="row">
                 <div className="col lista-agendamento">
                   <p className="service">Corte Simples</p>
                   <p class="service">08:00-08:30 AM</p>
                   <div className="detalhe">
-                    <img src={prof3} alt="" className="fotoAgendamento"></img>
+                    <img src={prof7} alt="" className="fotoAgendamento"></img>
                     <button type="button" className="input-agendamento">
                       Cancelar agendamento
                     </button>
                   </div>
                 </div>
               </div>
-              {/*<span>Agendamento 6</span>*/}
-              <p className="h5">12 de março</p>
+              {/*<span>Agendamento 8</span>*/}
+              <p className="day-month">14 de março</p>
               <div className="row">
                 <div className="col lista-agendamento">
                   <p className="service">Corte Simples</p>
                   <p class="service">08:00-08:30 AM</p>
                   <div className="detalhe">
-                    <img src={prof3} alt="" className="fotoAgendamento"></img>
+                    <img src={prof8} alt="" className="fotoAgendamento"></img>
+                    <button type="button" className="input-agendamento">
+                      Cancelar agendamento
+                    </button>
+                  </div>
+                </div>
+              </div>
+              {/*<span>Agendamento 9</span>*/}
+              <p className="day-month">15 de março</p>
+              <div className="row">
+                <div className="col lista-agendamento">
+                  <p className="service">Corte Simples</p>
+                  <p class="service">08:00-08:30 AM</p>
+                  <div className="detalhe">
+                    <img src={prof9} alt="" className="fotoAgendamento"></img>
                     <button type="button" className="input-agendamento">
                       Cancelar agendamento
                     </button>

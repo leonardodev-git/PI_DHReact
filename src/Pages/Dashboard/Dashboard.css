@@ -59,7 +59,7 @@ div .navProfile {
 }
 
 .button-sair {
-  margin-top: 400px;
+  margin-top: 380px;
 }
 
 .menu:hover {
@@ -219,12 +219,22 @@ li {
 }
 
 .tituloAgendamento {
-  margin: 10px 0px !important;
-  font-size: 1.2rem !important;
+  margin: 10px 0px 0px 15px !important;
+  font-size: 1.9rem !important;
+  font-weight: bold;
+  
 }
 
-.date {
-  font-size: 0.8rem !important;
+.tomorrow {
+  font-size: 1.3rem !important;
+  font-weight: bold;
+  margin-left: 15px;
+}
+
+.day-month {
+  font-size: 1.3rem !important;
+  font-weight: bold;
+
 }
 
 .professionalSchedule {
