@@ -68,14 +68,10 @@ export default function Dashboard() {
     setError(success.message)
     setTimeout(() => history.push('/'), 5000);    
   }
-
-  
-
-
-
   function logOut () {
     localStorage.removeItem('Token')
   }
+  
   
   return (
     <div className="body">
@@ -134,7 +130,9 @@ export default function Dashboard() {
                     </div>
                     <div className="contato">
                       <button type="button" className="contact">
-                        Entrar em contato
+                        <a href="https://wa.me/5511983099904?text=Olá!%20:)%20em%20que%20podemos%20te%20ajudar?">
+                          Entrar em contato
+                        </a>
                       </button>
                     </div>
                   </div>
@@ -219,14 +217,42 @@ export default function Dashboard() {
                   <p class="service">08:00-08:30 AM</p>
                   <div class="detalhe">
                     <img src={prof3} alt="" class="fotoAgendamento"></img>
-                    <button type="button" class="btn btn-warning btnDeletar">
-                      Deletar
+                    <button type="button" class="input-agendamento">
+                      Cancelar agendamento
                     </button>
                   </div>
                 </div>
               </div>
               {/*<span>Agendamento 5</span>*/}
               <p className="h5">11 de março</p>
+              <div className="row">
+                <div className="col lista-agendamento">
+                  <p className="service">Corte Simples</p>
+                  <p class="service">08:00-08:30 AM</p>
+                  <div className="detalhe">
+                    <img src={prof3} alt="" className="fotoAgendamento"></img>
+                    <button type="button" className="input-agendamento">
+                      Cancelar agendamento
+                    </button>
+                  </div>
+                </div>
+              </div>
+              {/*<span>Agendamento 6</span>*/}
+              <p className="h5">12 de março</p>
+              <div className="row">
+                <div className="col lista-agendamento">
+                  <p className="service">Corte Simples</p>
+                  <p class="service">08:00-08:30 AM</p>
+                  <div className="detalhe">
+                    <img src={prof3} alt="" className="fotoAgendamento"></img>
+                    <button type="button" className="input-agendamento">
+                      Cancelar agendamento
+                    </button>
+                  </div>
+                </div>
+              </div>
+              {/*<span>Agendamento 6</span>*/}
+              <p className="h5">12 de março</p>
               <div className="row">
                 <div className="col lista-agendamento">
                   <p className="service">Corte Simples</p>

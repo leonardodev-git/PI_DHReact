@@ -24,19 +24,20 @@ div .navProfile {
 
 .boas-vindas {
   display: flex;
-  margin-top: 32px;
-  font-size: 18px;
+  margin-top: 70px;
+  font-size: 25px;
 }
 
 .cliente {
   display: flex;
   margin: 5px 10px 0 0;
-  font-size: 27px;
+  font-size: 40px;
 }
 
 .email {
   display: flex;
-  font-size: 12px;
+  margin-top: 5px;
+  font-size: 18px;
 }
 
 /*Menu Nav da dash */
@@ -58,7 +59,7 @@ div .navProfile {
 }
 
 .button-sair {
-  margin-top: 500px;
+  margin-top: 400px;
 }
 
 .menu:hover {
@@ -213,7 +214,7 @@ li {
 
 .agendamentos {
   background-color: white;
-  height: 10%;
+  height: 1245px;
   border-radius: 10px;
 }
 
@@ -298,7 +299,7 @@ li {
 .mostly-customized-scrollbar {
   display: block;
   overflow-y: auto;
-  height: 35em;
+  height: 73em;
 }
 
  .mostly-customized-scrollbar::-webkit-scrollbar {
