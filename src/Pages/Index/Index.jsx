@@ -29,9 +29,9 @@ export default function Index() {
           'Content-Type': 'application/json'
         },
         body: JSON.stringify(form),
-      }) 
-      const result = await response.json() 
-      history.push('/login');
+      })
+   await response.json()
+   history.push('/login');
     
  }
 

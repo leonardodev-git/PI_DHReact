@@ -52,7 +52,7 @@ export default function confirm() {
                 <small className="nome">Cupom aplicado PRIMEIRACOMPRA</small>
                 <small className="nome">Inserir Cupom</small>
                 <div>
-                  <input type="text" placeholder="PRIMEIRACOMPRA"></input>
+                  <input type='text' placeholder='PRIMEIRACOMPRA'/>
                 </div>
                 <button type="submit" className="btn btn-warning paypal"> <img src={payPal} alt="paypal" className="img-paypal" /><a href="/login/dashboard/notification">Pagar com PayPal</a> </button>
               </div>

@@ -4,7 +4,7 @@ import { useHistory } from "react-router-dom";
 import './UserModal.css'
 
 
-export default function ({isOpen, onClose, onUserUpdate}) {
+export default function ({isOpen, onClose}) {
   const [form, setForm] = useState({
     email: '',
     nome: '',
@@ -21,9 +21,7 @@ export default function ({isOpen, onClose, onUserUpdate}) {
   const getCurrentUser = () => {
     return JSON.parse(localStorage.getItem("Token"));
   };
-  const user = getCurrentUser()
-
-
+  getCurrentUser()
   const onSubmit = async (e) => {
     e.preventDefault();
       const user = getCurrentUser()
@@ -35,7 +33,6 @@ export default function ({isOpen, onClose, onUserUpdate}) {
       },
       body: JSON.stringify(form),
     } )
-    const res = await tokenRes.json()
     history.push('/login/dashboard');
   }
 
