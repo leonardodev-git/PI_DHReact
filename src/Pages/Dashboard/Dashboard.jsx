@@ -11,7 +11,7 @@ import UserModal from '../../components/UserModal/UserModal'
 
 export default function Dashboard() {
   const [professional, setProfessional] = useState([])
-  const [showinfo, setshowInfo] = useState(false)
+  const [showInfo, setShowInfo] = useState(false)
   const [error, setError] = useState('')
   const [modalOpen, setModalOpen] = useState()
 
@@ -23,7 +23,7 @@ export default function Dashboard() {
   const user = getCurrentUser()
 
   useEffect(() => {
-    setshowInfo(true)
+    setShowInfo(true)
   }, [professional])
 
   useEffect(() => {
@@ -119,13 +119,13 @@ export default function Dashboard() {
             <div className="row barberInfo">
               <div className="col">
                 <div className="logoBarbe">
-                  <img src={logoBarber} alt="logoBarber" className="barberLogo"></img>
+                  <img src={logoBarber} alt='logoBarber' className='barberLogo'/>
                 </div>
               </div>
 
               <div>
                 <div className="shopBarbe">
-                  <img src={barberShop} alt="barberShop" className="barbershop"></img>
+                  <img src={barberShop} alt='barberShop' className='barbershop'/>
                   <div className="col">
                     <div>
                       <p className="welcome">
@@ -150,11 +150,11 @@ export default function Dashboard() {
 
             {/*Profissionais*/}
             <div className="row justify-content-around profissionais">
-              {showinfo &&
+              {showInfo &&
                 professional.map((data, i) => {
                   return (
                     <div className="col-4 professionalSchedule" key={i}>
-                      <img src={data.avatar} alt="perfil" className="fotoPerfil"></img>
+                      <img src={data.avatar} alt='perfil' className='fotoPerfil'/>
                       <h5>{data.nome}</h5>
                       <p className="especialidade">Especialidade do Barbeiro</p>
                       <button className="input-agenda" type="button" onClick={() => getProfessionalID(data.id)}>
@@ -176,7 +176,7 @@ export default function Dashboard() {
                   <p class="service">Corte Simples</p>
                   <p class="service">08:00-08:30 AM</p>
                   <div class="detalhe">
-                    <img src={prof1} alt="" class="fotoAgendamento"></img>
+                    <img src={prof1} alt='' class='fotoAgendamento'/>
                     <button type="button" class="input-agendamento">
                       Cancelar agendamento
                     </button>
@@ -190,7 +190,7 @@ export default function Dashboard() {
                   <p class="service">Corte Simples</p>
                   <p class="service">08:00-08:30 AM</p>
                   <div class="detalhe">
-                    <img src={prof2} alt="" class="fotoAgendamento"></img>
+                    <img src={prof2} alt='' class='fotoAgendamento'/>
                     <button type="button" class="input-agendamento">
                       Cancelar agendamento
                     </button>
@@ -205,7 +205,7 @@ export default function Dashboard() {
                   <p class="service">Corte Simples</p>
                   <p class="service">08:00-08:30 AM</p>
                   <div class="detalhe">
-                    <img src={prof3} alt="" class="fotoAgendamento"></img>
+                    <img src={prof3} alt='' class='fotoAgendamento'/>
                     <button type="button" class="input-agendamento">
                       Cancelar agendamento
                     </button>
@@ -220,7 +220,7 @@ export default function Dashboard() {
                   <p class="service">Corte Simples</p>
                   <p class="service">08:00-08:30 AM</p>
                   <div class="detalhe">
-                    <img src={prof3} alt="" class="fotoAgendamento"></img>
+                    <img src={prof3} alt='' class='fotoAgendamento'/>
                     <button type="button" class="input-agendamento">
                       Cancelar agendamento
                     </button>
@@ -234,7 +234,7 @@ export default function Dashboard() {
                   <p className="service">Corte Simples</p>
                   <p class="service">08:00-08:30 AM</p>
                   <div className="detalhe">
-                    <img src={prof3} alt="" className="fotoAgendamento"></img>
+                    <img src={prof3} alt='' className='fotoAgendamento'/>
                     <button type="button" className="input-agendamento">
                       Cancelar agendamento
                     </button>
@@ -248,7 +248,7 @@ export default function Dashboard() {
                   <p className="service">Corte Simples</p>
                   <p class="service">08:00-08:30 AM</p>
                   <div className="detalhe">
-                    <img src={prof3} alt="" className="fotoAgendamento"></img>
+                    <img src={prof3} alt='' className='fotoAgendamento'/>
                     <button type="button" className="input-agendamento">
                       Cancelar agendamento
                     </button>
@@ -262,7 +262,7 @@ export default function Dashboard() {
                   <p className="service">Corte Simples</p>
                   <p class="service">08:00-08:30 AM</p>
                   <div className="detalhe">
-                    <img src={prof3} alt="" className="fotoAgendamento"></img>
+                    <img src={prof3} alt='' className='fotoAgendamento'/>
                     <button type="button" className="input-agendamento">
                       Cancelar agendamento
                     </button>
@@ -276,7 +276,7 @@ export default function Dashboard() {
                   <p className="service">Corte Simples</p>
                   <p class="service">08:00-08:30 AM</p>
                   <div className="detalhe">
-                    <img src={prof3} alt="" className="fotoAgendamento"></img>
+                    <img src={prof3} alt='' className='fotoAgendamento'/>
                     <button type="button" className="input-agendamento">
                       Cancelar agendamento
                     </button>

@@ -43,9 +43,9 @@ export default function Login() {
       <div className="container">
         <div className="row">
           <div className="col-7 welcome">
-            <h1>Seja bem-vindo!</h1> <br></br>
-            <br></br>
-            <img className="ilustra" src={img} alt="Ilustração"></img>
+            <h1>Seja bem-vindo!</h1> <br/>
+            <br/>
+            <img className='ilustra' src={img} alt='Ilustração'/>
           </div>
           <div className="col-5 mw-100 div-form div-res">
             <div>
