@@ -6,19 +6,20 @@
   overflow: hidden;
 }
 
-div .navProfile {
+div.navProfile {
   display: block;
-  width: 15%;
+  width: 15%;  
   background-color: black;
   color: #FFC100;
   margin-left: -3%;
   margin-top: -5%;
-  margin-bottom: -30%;
+  margin-bottom: -20%;
   padding-top: 80px;
   padding-bottom: 60px;
   padding-left: 35px;
   border-radius: 10px;
   z-index: 20;
+  overflow: hidden;
   
 }
 
@@ -31,7 +32,7 @@ div .navProfile {
 .cliente {
   display: flex;
   margin: 5px 10px 0 0;
-  font-size: 40px;
+  font-size: 37px;
 }
 
 .email {
@@ -59,7 +60,7 @@ div .navProfile {
 }
 
 .button-sair {
-  margin-top: 380px;
+  margin-top: 500px;
 }
 
 .menu:hover {
@@ -127,18 +128,6 @@ div .navProfile {
 }
 
 
-
-
-
-
-
-
-
-
-
-
-
-
 /* Acaba aqui o menu */ 
 
 li {
@@ -153,6 +142,7 @@ li {
   width: 130px;
   margin-top: 30%;
   max-width: 100%;
+  border: 4px solid #FFC100;
   border-radius: 50%;
 }
 
@@ -160,7 +150,7 @@ li {
 
 .barberInfo {
   width: 100%;
-  height: 18%;
+  height: 15%;
   padding: 10px;
   background-color: white;
   border-radius: 10px;
@@ -174,8 +164,8 @@ li {
 
 .barbershop {
   display: flex;
-  margin-top: -35px;
-  width: 300px;
+  margin-top: -20px;
+  width: 350px;
   height: 265%;
   border-radius: 5%;
 }
@@ -194,16 +184,17 @@ li {
  }
 
  .barberLogo {
-   width: 100px;
+   display: flex;
+   width: 250px;
+   margin: 0 0 250px 50px;
  }
 
  p.welcome {
    display: flex;
-   font-size: 0.8rem;
+   font-size: 1.1rem;
    text-align: left;
-   margin: 0 60px 0 0;
-   padding: 20px 43px 0 15px;
-   margin-bottom: 30px;
+   margin: 0 15px 0 0;
+   padding: 25px 45px 0 60px;
  }
 
  .disponiveis {
@@ -211,6 +202,7 @@ li {
  }
 
 /*Final da Dahsboard*/
+
 
 .agendamentos {
   background-color: white;
@@ -221,8 +213,7 @@ li {
 .tituloAgendamento {
   margin: 10px 0px 0px 15px !important;
   font-size: 1.9rem !important;
-  font-weight: bold;
-  
+  font-weight: bold; 
 }
 
 .tomorrow {
@@ -234,7 +225,6 @@ li {
 .day-month {
   font-size: 1.3rem !important;
   font-weight: bold;
-
 }
 
 .professionalSchedule {
@@ -282,13 +272,13 @@ li {
   margin-top: 10px;
   margin-bottom: 10px;
   width: 100px;
-  border: 3px solid #FFC100;
+  border: 4px solid #FFC100;
   border-radius: 50%;
 }
 
 .fotoAgendamento {
-  width: 50px;
-  height: 50px;
+  width: 75px;
+  height: 75px;
   border: 3px solid #FFC100;
   border-radius: 50%;
 }
@@ -309,7 +299,7 @@ li {
 .mostly-customized-scrollbar {
   display: block;
   overflow-y: auto;
-  height: 73em;
+  height: 70em;
 }
 
  .mostly-customized-scrollbar::-webkit-scrollbar {
@@ -339,44 +329,44 @@ li {
    margin-bottom: 15px;
  }
 
- .contact {
+
+ .coluna-contato {
    display: block;
+ }
+
+ .contact {
+   display: flex;
    background-color: #FFC100;
    color: #000000;
    justify-content: center;
-   width: 185px;
+   width: 400px;
    height: 40px;
-   margin-left: 180px;
+   margin-bottom: 100px;   
    padding: 7px;
    border-radius: 10px;
    text-decoration: none;
    z-index: 20;
  }
 
- .contact:hover {
+  .contact:hover {
    display: block;
    background-color: #000000;
    color: #FFC100;
    justify-content: center;
-   width: 185px;
+   width: 400px;
    height: 40px;
-   margin-left: 180px;
+   margin-bottom: 100px;
    padding: 7px;
    border-radius: 10px;
    text-decoration: none;
    z-index: 20;
  }
 
-
-
-
-
-
-
-
-
-
-
+ .contato {
+   display: block;
+   justify-content: center;
+   padding-bottom: 200px;
+ }
 
 /* Responsivo da Dash 01 */
 

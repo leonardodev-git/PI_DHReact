@@ -78,7 +78,6 @@ export default function Dashboard() {
     localStorage.setItem('Professional', JSON.stringify(content.professionalDetails))
     history.push('/login/dashboard/calendar')
   }
-
   function logOut() {
     localStorage.removeItem('Token')
   }
@@ -121,18 +120,12 @@ export default function Dashboard() {
             </div>
           </div>
 
-          <div className="col-7 px-lg-4">
+          <div className="col-7 px-lg-4 ">
             <div className="row barberInfo">
-              <div className="col">
-                <div className="logoBarbe">
-                  <img src={logoBarber} alt="logoBarber" className="barberLogo"></img>
-                </div>
-              </div>
-
               <div>
                 <div className="shopBarbe">
-                  <img src={barberShop} alt="barberShop" className="barbershop"></img>
-                  <div className="col">
+                  <img src={logoBarber} alt="barberShop" className="barberLogo"></img>
+                  <div className="col coluna-contato">
                     <div>
                       <p className="welcome">
                         A Barbershop é uma barbearia com mais de 12 anos de serviços prestados e pode contar com os
@@ -194,10 +187,10 @@ export default function Dashboard() {
               <div className="row">
                 <div className="col lista-agendamento">
                   <p className="service">Corte Simples</p>
-                  <p class="service">08:00-08:30 AM</p>
-                  <div class="detalhe">
-                    <img src={prof2} alt="" class="fotoAgendamento"></img>
-                    <button type="button" class="input-agendamento">
+                  <p className="service">08:00-08:30 AM</p>
+                  <div className="detalhe">
+                    <img src={prof2} alt="" className="fotoAgendamento"></img>
+                    <button type="button" className="input-agendamento">
                       Cancelar agendamento
                     </button>
                   </div>
@@ -206,13 +199,13 @@ export default function Dashboard() {
 
               {/*<span>Agendamento 3</span>*/}
               <p className="day-month">9 de março</p>
-              <div class="row">
-                <div class="col lista-agendamento">
-                  <p class="service">Corte Simples</p>
-                  <p class="service">08:00-08:30 AM</p>
-                  <div class="detalhe">
-                    <img src={prof3} alt="" class="fotoAgendamento"></img>
-                    <button type="button" class="input-agendamento">
+              <div className="row">
+                <div className="col lista-agendamento">
+                  <p className="service">Corte Simples</p>
+                  <p className="service">08:00-08:30 AM</p>
+                  <div className="detalhe">
+                    <img src={prof3} alt="" className="fotoAgendamento"></img>
+                    <button type="button" className="input-agendamento">
                       Cancelar agendamento
                     </button>
                   </div>
@@ -221,13 +214,13 @@ export default function Dashboard() {
 
               {/*<span>Agendamento 4</span>*/}
               <p className="day-month">10 de março</p>
-              <div class="row">
-                <div class="col lista-agendamento">
-                  <p class="service">Corte Simples</p>
-                  <p class="service">08:00-08:30 AM</p>
-                  <div class="detalhe">
-                    <img src={prof4} alt="" class="fotoAgendamento"></img>
-                    <button type="button" class="input-agendamento">
+              <div className="row">
+                <div className="col lista-agendamento">
+                  <p className="service">Corte Simples</p>
+                  <p className="service">08:00-08:30 AM</p>
+                  <div className="detalhe">
+                    <img src={prof4} alt="" className="fotoAgendamento"></img>
+                    <button type="button" className="input-agendamento">
                       Cancelar agendamento
                     </button>
                   </div>
@@ -238,7 +231,7 @@ export default function Dashboard() {
               <div className="row">
                 <div className="col lista-agendamento">
                   <p className="service">Corte Simples</p>
-                  <p class="service">08:00-08:30 AM</p>
+                  <p className="service">08:00-08:30 AM</p>
                   <div className="detalhe">
                     <img src={prof5} alt="" className="fotoAgendamento"></img>
                     <button type="button" className="input-agendamento">
@@ -252,7 +245,7 @@ export default function Dashboard() {
               <div className="row">
                 <div className="col lista-agendamento">
                   <p className="service">Corte Simples</p>
-                  <p class="service">08:00-08:30 AM</p>
+                  <p className="service">08:00-08:30 AM</p>
                   <div className="detalhe">
                     <img src={prof6} alt="" className="fotoAgendamento"></img>
                     <button type="button" className="input-agendamento">
@@ -266,7 +259,7 @@ export default function Dashboard() {
               <div className="row">
                 <div className="col lista-agendamento">
                   <p className="service">Corte Simples</p>
-                  <p class="service">08:00-08:30 AM</p>
+                  <p className="service">08:00-08:30 AM</p>
                   <div className="detalhe">
                     <img src={prof7} alt="" className="fotoAgendamento"></img>
                     <button type="button" className="input-agendamento">
@@ -280,7 +273,7 @@ export default function Dashboard() {
               <div className="row">
                 <div className="col lista-agendamento">
                   <p className="service">Corte Simples</p>
-                  <p class="service">08:00-08:30 AM</p>
+                  <p className="service">08:00-08:30 AM</p>
                   <div className="detalhe">
                     <img src={prof8} alt="" className="fotoAgendamento"></img>
                     <button type="button" className="input-agendamento">
@@ -294,7 +287,7 @@ export default function Dashboard() {
               <div className="row">
                 <div className="col lista-agendamento">
                   <p className="service">Corte Simples</p>
-                  <p class="service">08:00-08:30 AM</p>
+                  <p className="service">08:00-08:30 AM</p>
                   <div className="detalhe">
                     <img src={prof9} alt="" className="fotoAgendamento"></img>
                     <button type="button" className="input-agendamento">
