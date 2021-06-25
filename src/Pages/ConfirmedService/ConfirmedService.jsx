@@ -27,7 +27,7 @@ export default function confirm() {
               <h2 className="cliente">{user.user}</h2>
               <p className="email">{user.email}</p>
               <ul class="list-group">
-              <li className="nav-lista"><FaHome />     Dashboard</li>
+              <li className="nav-lista"><FaHome /> Dashboard</li>
                 <li className="nav-lista"><FaHotjar /> Notificações</li>
                 <li className="nav-lista"><FaStar/> Preferências</li>
               </ul>

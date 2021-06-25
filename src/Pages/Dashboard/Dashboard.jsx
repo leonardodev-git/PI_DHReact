@@ -87,12 +87,12 @@ export default function Dashboard() {
     <div className="body">
       <div className="container-fluid">
         <div className="row">
-          <div className="col-2 navProfile">
+          <div className="col-xl-12 col-xs-4 navProfile">
             <img src={client2} alt="perfil" className="foto-perfil border-profile" />
-            <div className="nav-info">
-              <small className="boas-vindas">Bem vindo(a)!</small>
+            <div className="nav-info  col-xl-12 col-xs-2">
+              <small className="boas-vindas col-xs-2">Bem vindo(a)!</small>
               {error}
-              <h2 className="cliente">{user.user}</h2>
+              <h2 className="cliente col-xs-2">{user.user}</h2>
               <p className="email">{user.email}</p>
               <ul className="list-group">
                 <li className="nav-lista">
@@ -120,7 +120,7 @@ export default function Dashboard() {
             </div>
           </div>
 
-          <div className="col-7 px-lg-4 ">
+          <div className="col-7 px-lg-4">
             <div className="row barberInfo">
               <div>
                 <div className="shopBarbe">
@@ -133,11 +133,14 @@ export default function Dashboard() {
                       </p>
                     </div>
                     <div className="contato">
-                      <button type="button" className="contact">
-                        <a href="https://wa.me/5511983099904?text=Olá!%20:)%20em%20que%20podemos%20te%20ajudar?">
-                          Entrar em contato
-                        </a>
-                      </button>
+                      <a
+                        classname="cta"
+                        type="button"
+                        href="https://wa.me/5511983099904?text=Olá!%20:)%20em%20que%20podemos%20te%20ajudar?"
+                        className="contact"
+                      >
+                        Entrar em contato
+                      </a>
                     </div>
                   </div>
                 </div>
@@ -226,6 +229,7 @@ export default function Dashboard() {
                   </div>
                 </div>
               </div>
+
               {/*<span>Agendamento 5</span>*/}
               <p className="day-month">11 de março</p>
               <div className="row">
@@ -240,6 +244,7 @@ export default function Dashboard() {
                   </div>
                 </div>
               </div>
+              
               {/*<span>Agendamento 6</span>*/}
               <p className="day-month">12 de março</p>
               <div className="row">

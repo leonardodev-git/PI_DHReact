@@ -15,17 +15,54 @@
   margin: 0%;
   border-radius: 30px;
 }
+
+.button-out {
+  margin-top:310px;
+}
+
 .carrousel {
   background-color: white;
 }
 .profilePhoto {
-  width: 80px !important;
-  height: 50px;
+  width: 100px;
+  height: 100px;
+  border: 3px solid #FFC100;
+  border-radius: 50%;
 }
 
-.carousel-img {
-  width: 150px;
+.confirma {
+  display: flex;
+  justify-content: center;
+  background-color: #FFC100;
+  color: #000000;
+  justify-content: center;
+  width: 200px;
+  height: 40px;
+  padding: 100px;
+  padding: 7px;
+  border-radius: 10px;
+  z-index: 20;
+}
+
+.confirma:hover {
+  display: flex;
+  background-color: #000000;
+  color: #FFC100;
+  justify-content: center;
+  width: 200px;
+  height: 40px;
+  margin: 20px 0 0 50px;
+  padding: 7px;
+  border-radius: 10px;
+  z-index: 20;
+}
+
+
+.carousel-img {  
   max-width: 100%;
+  border-radius: 10%;
+  border: 3px solid #FFC100;
+
 }
 
 .ScheduleList {
@@ -41,13 +78,54 @@
   margin: 0px 10px;
 }
 
-.especialidade {
-  margin: 0;
-  padding: 0;
+.specialty {
+  display: flex;
+  justify-content: center;
+  font-size: 1.3em;
+  font-weight: bold;
 }
 
-.schedule-area {
-  margin-top: 15px !important;
+.specification {
+  display: flex;
+  justify-content: center;
+  font-size: 1.0em;
+}
+
+.to-schedule {
+  display: flex;
+  justify-content: center;
+  background-color: #FFC100;
+  color: #000000;
+  justify-content: center;
+  width: 400px;
+  height: 40px;
+  padding: 100px;
+  padding: 7px;
+  border-radius: 10px;  
+  z-index: 20;
+}
+
+.to-schedule:hover {
+  display: flex;
+  background-color: #000000;
+  color: #FFC100;
+  justify-content: center;
+  width: 400px;
+  height: 40px;
+  margin: 20px 0 0 50px;
+  padding: 7px;
+  border-radius: 10px;  
+  z-index: 20;
+}
+
+.schedule-to {
+  display: flex;
+  justify-content: center;
+  margin: -50px;
+}
+
+.cta {
+  padding-left: 150px;
 }
 
 .lista-agendamento-callendar {
@@ -65,3 +143,133 @@
   width: 50%;
   margin: 0 !important;
 }
+
+.agendamento {
+  background-color: rgb(255, 255, 255);
+  margin-top: 20px;
+  height: 975px;
+  border-radius: 10px;
+}
+
+.tituloAgendamento {
+  margin: 10px 0px 0px 15px !important;
+  font-size: 1.9rem !important;
+  font-weight: bold;
+}
+
+.tomorrow {
+  font-size: 1.3rem !important;
+  font-weight: bold;
+  margin-left: 15px;
+}
+
+.day-month {
+  font-size: 1.3rem !important;
+  font-weight: bold;
+}
+
+.professionalSchedule {
+  display: block;
+  grid-gap: 5px 20px;
+  background-color: #ffffff;
+  margin: 50px auto;
+  max-width: 250px !important;
+  height: 270px;
+  padding: 10px;
+  border-radius: 5%;
+}
+
+.especialidade {
+  text-align: center;
+}
+
+.input-agenda {
+  display: flex;
+  background-color: #FFC100;
+  color: #000000;
+  justify-content: center;
+  width: 185px;
+  height: 40px;
+  margin: 12px 25px;
+  padding-top: 7px;
+  border-radius: 10px;
+  text-decoration: none;
+}
+
+.input-agenda:hover {
+  display: flex;
+  background-color: #000000;
+  color: #FFC100;
+  justify-content: center;
+  width: 185px;
+  height: 40px;
+  margin: 12px 25px;
+  padding-top: 7px;
+  border-radius: 10px;
+  text-decoration: none;
+}
+
+.fotoPerfil {
+  margin-top: 10px;
+  margin-bottom: 10px;
+  width: 100px;
+  border: 4px solid #FFC100;
+  border-radius: 50%;
+}
+
+.fotoAgendamento {
+  width: 75px;
+  height: 75px;
+  border: 3px solid #FFC100;
+  border-radius: 50%;
+}
+
+.detalhe {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.lista-agendamento {
+  background-color: #FFF2B2;
+  margin: 25px;
+  border-radius: 15px;
+}
+
+/* SCroll-bar Meus agendamentos */
+.mostly-customized-scrollbar02 {
+  display: block;
+  overflow-y: auto;
+  height: 55em;
+}
+
+.mostly-customized-scrollbar02::-webkit-scrollbar {
+  width: 5px;
+  height: 0;
+  background-color: #aaa;
+}
+
+.mostly-customized-scrollbar02::-webkit-scrollbar-thumb {
+  background: #FFC100;
+  border-radius: 5px;
+}
+
+.input-agendamento {
+  background-color: #000000;
+  color: #FFC100;
+  height: 45px;
+  border-radius: 10px;
+  margin-bottom: 15px;
+}
+
+.input-agendamento:hover {
+  background-color: #FFC100;
+  color: #000000;
+  height: 45px;
+  border-radius: 10px;
+  margin-bottom: 15px;
+}
+
+
+
+
