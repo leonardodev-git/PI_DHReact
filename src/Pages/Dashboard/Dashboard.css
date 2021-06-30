@@ -367,7 +367,6 @@ li {
    z-index: 20;
  }
 
-
  .contato {
    display: block;
    justify-content: center;
@@ -427,6 +426,7 @@ li {
         margin-top: -25px;
         margin-right: 80px;
       }
+      
       .barberInfo {
         margin: auto;
         margin-top: 25px;
