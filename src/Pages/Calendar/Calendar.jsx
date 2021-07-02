@@ -98,6 +98,9 @@ export default function Calendar() {
      localStorage.removeItem('Token')
    }
 
+
+
+
   return (
     <div className="body">
       <div class="container-fluid">
@@ -109,6 +112,7 @@ export default function Calendar() {
               <h2 className="cliente">{user.user}</h2>
               <p className="email">{user.email}</p>
               <ul class="list-group">
+
                 <li className="nav-lista">
                   <button className="buttonDash fa fa-home fa-fw  menu">Dashboard</button>
                 </li>
@@ -121,6 +125,9 @@ export default function Calendar() {
                   <button className=" fa fa-bell fa-fw  menu" onClick={handleDelete}>
                     Deletar Conta
                   </button>
+
+
+                  
                 </li>
               </ul>
               <UserModal isOpen={modalOpenUser} onClose={() => setModalOpenUser(false)} />

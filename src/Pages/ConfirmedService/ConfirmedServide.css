@@ -44,3 +44,19 @@ input {
   margin-right: 5px;
   max-width: 100%;
 }
+
+
+.prof-contrat {
+  display: flex;
+  justify-content: center;
+
+}
+
+.service-type {
+  justify-content: center;
+  margin-left: 75px;
+  text-align: center;
+}
+
+
+
