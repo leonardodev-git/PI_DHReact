@@ -12,6 +12,10 @@ p {
   padding-top: 5px;
 }
 
+h1 {
+  padding-top: 10%;
+}
+
 p {
   font-size: 16px;
   margin-top: 10px;
@@ -121,8 +125,6 @@ button>a {
 .endereço {
   display: block;
 }
-
-
 
 
 /*Responsividade Mobile*/
@@ -293,31 +295,6 @@ button>a {
    .ilustra {
      display: none;
    }
-
-
-
-   
-
-
-
-
-
-
- 
-
-  
-
-
-
-
-
-
-
-
-
-
-
-
 }
 
 

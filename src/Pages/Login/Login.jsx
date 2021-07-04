@@ -43,11 +43,15 @@ export default function Login() {
       <div className="container">
         <div className="row mob-row  tables-row">
           <div className="col-7 welcome">
-            <h1>Seja bem-vindo!</h1> <br></br>
+            <div className="mob  table">
+              <h1 className="mob  title-tablet">Seja bem-vindo!</h1>
+            </div>
+
+            <br></br>
             <br></br>
             <img className="ilustra" src={img} alt="Ilustração"></img>
           </div>
-          <div className="col-5   mw-100 div-form div-res">
+          <div className="col-5 col-sm mw-100 div-form div-res dev__res-table">
             <div>
               <div className="cadastro">
                 <span>Login</span>
@@ -59,7 +63,7 @@ export default function Login() {
                   </small>
                   <input
                     type="email"
-                    className="form-control"
+                    className="form-control imput-res imput-table"
                     name="email"
                     placeholder="Endereço de email"
                     onChange={handleSubmit}
@@ -69,7 +73,7 @@ export default function Login() {
                   </small>
                   <input
                     type="password"
-                    className="form-control"
+                    className="form-control imput-res imput-table"
                     name="senha"
                     placeholder="Senha"
                     onChange={handleSubmit}
