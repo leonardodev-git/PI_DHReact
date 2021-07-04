@@ -2,8 +2,11 @@
   text-align: center;
 }
 
-.body {
-  padding: 2% !important;
+.body-confirmed {  
+  background-image: url(../../Assets/backgrond-pay-confirmed.jpg);
+  background-color: rgb(10, 10, 10);
+  overflow: hidden;
+  
 }
 
 .profile {
@@ -12,39 +15,72 @@
   max-width: 100%;
 }
 
-.nav {
-  background-color: black;
-  color: white;
-  margin: 0%;
-  border-radius: 30px;
+.medium {
+  background-color: rgb(0, 0, 0);
+  background: rgba(0, 0, 0, 0.7);
+  margin-left: 500px;
+  border-radius: 20px;
 }
 
-.medium {
-  background-color: white;
+
+.profissa {
+   font-size: 45px;
+}
+
+.service-sched {
+  font-size: 20px;
+  color: rgb(10, 184, 10);
+  margin: 0;
+  padding: 0;
+}
+
+.sucess {  
+  width: 100%;
+  margin: 0;
+  
+}
+
+.sucess-pay {
+  flex-wrap: wrap;
+  justify-content: center;
+  width: 25px;
+  margin: -45px 10px 0 225px;
+  text-align: center;
 }
 
 .confirmed,
 .paypal,
 input {
-  margin: 10px auto !important;
+  margin: 20px auto !important;
   max-width: 100%;
   width: 50% !important;
 }
 
 .perfil-img {
   width: 100px;
-  margin: 0px 10px;
+  margin: 20px 10px;
 }
 .nome {
   text-align: center;
 }
 
 .img-paypal {
-  width: 20px;
+  width: 25px;
   margin-right: 5px;
   max-width: 100%;
 }
 
+.color-world {
+  color: aliceblue;
+}
+
+a {
+  font-size: 20px;
+}
+
+.paypal {
+  border-radius: 100px;
+}
 
 .prof-contrat {
   display: flex;
@@ -57,6 +93,8 @@ input {
   margin-left: 75px;
   text-align: center;
 }
+
+
 
 
 

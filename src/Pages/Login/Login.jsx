@@ -41,13 +41,13 @@ export default function Login() {
   return (
     <div className="body">
       <div className="container">
-        <div className="row">
+        <div className="row mob-row  tables-row">
           <div className="col-7 welcome">
             <h1>Seja bem-vindo!</h1> <br></br>
             <br></br>
             <img className="ilustra" src={img} alt="Ilustração"></img>
           </div>
-          <div className="col-5 mw-100 div-form div-res">
+          <div className="col-5   mw-100 div-form div-res">
             <div>
               <div className="cadastro">
                 <span>Login</span>

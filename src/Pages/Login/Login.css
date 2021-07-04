@@ -28,3 +28,255 @@ button {
   width: 80%;
   margin: 10% 10% !important;
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*Responsividade Mobile*/
+
+@media(max-width: 500px) {
+  .body {
+    display: flex;
+    background-color: #F2F2F2;
+    align-items: center;
+    overflow: hidden;
+  }
+
+  .div-res {
+    display: block;
+    background-color: #F2F2F2;
+    max-width: 20%;
+    border-radius: none;
+    border: none;
+  }
+
+  .welcome {
+    display: block;
+    max-width: 100% !important;
+    margin: 50% 20% 0;
+    padding-top: 10px;
+  }
+
+  h1.titulo {
+    display: flex;
+    text-align: center;
+    font-size: 30px;
+    width: 350px;
+    margin-left: 20px;
+  }
+
+  p.mobile-p {
+    display: flex;
+    text-align: center;
+    width: 250px;
+    margin-left: 10px;
+  }
+
+  span.cad-mobile {
+    font-size: 16px;
+    text-align: center;
+    font-size: 20px;
+    margin: auto;
+    padding: auto;
+  }
+
+  .mob-row {
+    display: flex;
+    justify-content: center;
+    max-width: 800px;
+
+
+  }
+
+  .div-res {
+    display: flex;
+    background-color: #F2F2F2;
+    max-width: 500px;
+    border-radius: none;
+    border: none;
+  }
+
+
+  .res-row {
+    display: flex;
+    justify-content: center;
+    max-width: 500px;
+
+
+  }
+
+  span.cad-mobile {
+    display: flex;
+    justify-content: center;
+    width: 200px;
+    margin-right: 200px;
+    padding-bottom: 5px;
+  }
+
+  .ilustra {
+    display: none;
+  }
+
+  span {
+    display: flex;
+    justify-content: center;
+  }
+
+  .input-nome {
+    display: block;
+    justify-content: center;
+    width: 150% !important;
+    margin: auto 100%;
+    text-align: left;
+  }
+
+  .input-sobrenome {
+    width: 90% !important;
+    text-align: left;
+  }
+
+  .logo {
+    display: flex;
+    justify-content: center;
+    margin-left: 100px;
+    padding: 5px 100px;
+    width: 290px !important;
+  }
+
+  .logotipo {
+    display: flex;
+    justify-content: center;
+    padding: 10px 100px;
+    width: 350px !important;
+    height: 120px !important;
+  }
+}
+
+@media(max-width: 500px) {
+  .body {
+    display: block;
+    background-color: #F2F2F2;
+    align-items: center;
+    overflow: hidden;
+  }
+
+  .div-res {
+    display: block;
+    background-color: #F2F2F2;
+    max-width: 20%;
+    border-radius: none;
+    border: none;
+
+  }
+
+  h1,
+  p {
+    display: flex;
+    text-align: center;
+    margin-left: 20px;
+  }
+
+  h1 {
+    width: 1000px;
+    margin: 0;
+    padding-top: 50%;
+    padding-bottom: -10%;
+  }
+
+  p {
+    font-size: 16px;
+  }
+
+  .cadastro {
+    padding-bottom: 5px;
+  }
+
+
+  .ilustra {
+    display: none;
+  }
+
+  span {
+    display: flex;
+    justify-content: center;
+
+  }
+
+  .form {
+    display: flex;
+    max-width: 50% !important;
+    margin-top: 50%;
+    justify-content: center;
+  }
+
+  .input-nome {
+    display: flex;
+    justify-content: center;
+    text-align: left;
+  }
+
+  .input-sobrenome {
+    display: flex;
+    justify-content: center;
+    text-align: left;
+  }
+
+
+  .row {
+    display: none;
+  }
+
+  div[class^="col-5"] {
+    width: 500px;
+
+  }
+
+  .logo {
+    display: flex;
+    justify-content: center;
+    margin-top: none;
+    padding: 5px 100px; 
+    width: 290px !important;
+  }
+
+  .logo-index {
+    display: flex;
+    justify-content: center;
+    margin: 0  0 0 32px;
+  }
+
+  .logo-res {
+    display: flex;
+    justify-content: center !important;
+    /*padding: 10px 50px;*/
+    /*margin: 100px 50% 100px 50%;*/ 
+    width: 380px !important;
+    height: 120px !important; 
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+

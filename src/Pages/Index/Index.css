@@ -43,7 +43,7 @@ p {
 .div-res {
   display: flex;
   width: 10px;
-  height: 685px;
+  height: 800px;
   background-color: rgb(255, 255, 255);
   border-radius: 3%;
   border: 1px solid rgb(172, 172, 172);
@@ -91,6 +91,7 @@ p {
   display: flex;
   justify-content: center;
   margin-left: 100px;
+  padding: 50px;
   width: 170px !important;
 }
 
@@ -281,7 +282,7 @@ button>a {
      margin-left: 80px;
    }
 
-   .tabres-row {
+   .tables-row {
      display: flex;
      justify-content: center;
      width: 650px;

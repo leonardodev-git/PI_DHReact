@@ -55,7 +55,7 @@ export default function Index() {
                 {/*<span>Login</span>*/}
               </div>
               <form onSubmit={userSubmit} autoComplete="off">
-                <div className="row mob-row  tabres-row">
+                <div className="row mob-row  tables-row">
                   <div className="col formulario">
                     <small id="passwordHelpBlock" className="descricao">
                       Nome
