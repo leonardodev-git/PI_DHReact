@@ -35,6 +35,7 @@ export default function confirm() {
                   </p>
                 </div>
 
+
                 <p className="nome color-world ">Total R$20,50</p>
                 <p className="nome color-world ">Descontos - R$10,00</p>
                 <p className="nome color-world">
@@ -43,7 +44,7 @@ export default function confirm() {
                 <small className="nome color-world ">Cupom aplicado PRIMEIRACOMPRA</small>
                 <small className="nome color-world ">Inserir Cupom</small>
                 <div>
-                  <input type="text" placeholder="PRIMEIRACOMPRA"></input>
+                  <input type='text' placeholder='PRIMEIRACOMPRA'/>
                 </div>
                 <button type="submit" className="btn btn-warning paypal">
                   <img src={payPal} alt="paypal" className="img-paypal" />

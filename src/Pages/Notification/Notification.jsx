@@ -6,7 +6,7 @@ export default function notification() {
     <div class="container-fluid">
       <div class="row">
         <div class="col-2 nav">
-          <img src="/images/imagem.png" alt="perfil"></img>
+          <img src='/images/imagem.png' alt='perfil'/>
           <div class="nav-info">
             <small>Seja bem vinda.</small>
             <h2>Ana Maria</h2>
@@ -20,12 +20,12 @@ export default function notification() {
         <div class="col-md-4 offset-md-2">
           <div class="form form-login">
             <div class="cadastro">
-              <img src="/images/imagem.png" alt="foto_perfil" class="perfil-img"></img>
+              <img src='/images/imagem.png' alt='foto_perfil' class='perfil-img'/>
             </div>
             <div class="row">
               <p class="h2 nome">Mariana Silva</p>
               <small class="nome">Serviço Agendado</small>
-              <button type="submit" class="btn btn-warning input-maior ajuste">Corte Simples <br></br> <strong>11 de Agosto de 2020</strong>  <br></br> <strong>07:00-07:30 AM</strong>      </button>
+              <button type="submit" class="btn btn-warning input-maior ajuste">Corte Simples <br/> <strong>11 de Agosto de 2020</strong>  <br/> <strong>07:00-07:30 AM</strong>      </button>
 
               <p class="nome">Total R$20,50</p>
               <p class="nome">Descontos - R$10,00</p>

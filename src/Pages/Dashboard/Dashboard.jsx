@@ -17,7 +17,7 @@ import UserModal from '../../components/UserModal/UserModal'
 
 export default function Dashboard() {
   const [professional, setProfessional] = useState([])
-  const [showinfo, setshowInfo] = useState(false)
+  const [showInfo, setShowInfo] = useState(false)
   const [error, setError] = useState('')
   const [modalOpen, setModalOpen] = useState()
 
@@ -29,7 +29,7 @@ export default function Dashboard() {
   const user = getCurrentUser()
 
   useEffect(() => {
-    setshowInfo(true)
+    setShowInfo(true)
   }, [professional])
 
   useEffect(() => {
@@ -126,6 +126,8 @@ export default function Dashboard() {
                 <div className="shopBarbe">
                   <img src={logoBarber} alt="barberShop" className="barberLogo"></img>
                   <div className="col coluna-contato">
+
+  
                     <div>
                       <p className="welcome">
                         A Barbershop é uma barbearia com mais de 12 anos de serviços prestados e pode contar com os
@@ -152,11 +154,11 @@ export default function Dashboard() {
 
             {/*Profissionais*/}
             <div className="row justify-content-around profissionais">
-              {showinfo &&
+              {showInfo &&
                 professional.map((data, i) => {
                   return (
                     <div className="col-4 professionalSchedule" key={i}>
-                      <img src={data.avatar} alt="perfil" className="fotoPerfil"></img>
+                      <img src={data.avatar} alt='perfil' className='fotoPerfil'/>
                       <h5>{data.nome}</h5>
                       <p className="especialidade">Especialidade do Barbeiro</p>
                       <button className="input-agenda" type="button" onClick={() => getProfessionalID(data.id)}>
@@ -180,6 +182,7 @@ export default function Dashboard() {
                   <div className="detalhe">
                     <img src={prof1} alt="" className="fotoAgendamento"></img>
                     <button type="button" className="input-agendamento">
+
                       Cancelar agendamento
                     </button>
                   </div>
@@ -224,6 +227,7 @@ export default function Dashboard() {
                   <div className="detalhe">
                     <img src={prof4} alt="" className="fotoAgendamento"></img>
                     <button type="button" className="input-agendamento">
+
                       Cancelar agendamento
                     </button>
                   </div>
@@ -238,6 +242,7 @@ export default function Dashboard() {
                   <p className="service">08:00-08:30 AM</p>
                   <div className="detalhe">
                     <img src={prof5} alt="" className="fotoAgendamento"></img>
+
                     <button type="button" className="input-agendamento">
                       Cancelar agendamento
                     </button>
@@ -253,6 +258,7 @@ export default function Dashboard() {
                   <p className="service">08:00-08:30 AM</p>
                   <div className="detalhe">
                     <img src={prof6} alt="" className="fotoAgendamento"></img>
+
                     <button type="button" className="input-agendamento">
                       Cancelar agendamento
                     </button>
@@ -267,6 +273,7 @@ export default function Dashboard() {
                   <p className="service">08:00-08:30 AM</p>
                   <div className="detalhe">
                     <img src={prof7} alt="" className="fotoAgendamento"></img>
+
                     <button type="button" className="input-agendamento">
                       Cancelar agendamento
                     </button>
@@ -295,6 +302,7 @@ export default function Dashboard() {
                   <p className="service">08:00-08:30 AM</p>
                   <div className="detalhe">
                     <img src={prof9} alt="" className="fotoAgendamento"></img>
+
                     <button type="button" className="input-agendamento">
                       Cancelar agendamento
                     </button>

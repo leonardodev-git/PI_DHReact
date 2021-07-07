@@ -3,11 +3,7 @@ export default function isAuthenticated  () {
     return JSON.parse(localStorage.getItem("Token"));
   };
   
-  if (getCurrentUser().acessToken) {
-  return true
-  } else {
-  return false
-  }
+  return !!getCurrentUser().acessToken;
 
 }
 
