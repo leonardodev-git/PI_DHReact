@@ -48,7 +48,7 @@ export default function Index() {
             </p>
             <img className="ilustra" src={ilustracao} alt="Illustração"></img>
           </div>
-          <div className="col-5 mw-100 div-form div-res">
+          <div className="col-4 mw-100 div-form div-res">
             <div>
               <div className="cadastro cad-mobile cad-tablet">
                 <span className="cadastro cad-mobile cad-tablet">Cadastre-se</span>

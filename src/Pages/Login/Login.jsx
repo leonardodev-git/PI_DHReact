@@ -44,7 +44,7 @@ export default function Login() {
         <div className="row mob-row  tables-row">
           <div className="col-7 welcome">
             <div className="mob  table">
-              <h1 className="mob  title-tablet">Seja bem-vindo!</h1>
+              <h1 className="mob  title-tablet-login">Seja bem-vindo!</h1>
             </div>
 
             <br></br>
