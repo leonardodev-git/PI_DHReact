@@ -74,9 +74,11 @@ export default function ({isOpen, onClose}) {
               onChange={handleChange}
               name="sobrenome"
             />
-          </div>          
-          <button className="alter" href="/login/dashboard">
-            <a>Concluir Alterações</a>
+          </div>
+          <button className="alter">
+            <a className="alter" href="/login/dashboard">
+              Concluir Alterações
+            </a>
           </button>
         </div>
       </form>

@@ -28,3 +28,210 @@ button {
   width: 80%;
   margin: 10% 10% !important;
 }
+
+
+/*Responsivo Mobile*/ 
+
+@media(max-width: 500px) {
+  .body {
+    display: block;
+    background-color: #F2F2F2;
+    align-items: center;
+    overflow: hidden;
+  }
+
+  .div-res {
+    display: block;
+    background-color: #F2F2F2;
+    max-width: 20%;
+    border-radius: none;
+    border: none;
+
+  }
+
+  .welcome {
+    display: flex;
+    justify-content: center;
+    padding: 0 50%;
+  }
+
+    .mob {
+      width: 1000px;
+      padding-top: 30%;
+      padding-bottom: -10%;
+    }
+
+
+  h1,
+  p {
+    display: flex;
+    text-align: center;
+    margin-right: 100px;
+  }
+ 
+  p {
+    font-size: 16px;
+  }
+
+  .cadastro {
+    padding-bottom: 5px;
+  }
+
+  .ilustra {
+    display: none;
+  }
+
+  span {
+    display: flex;
+    justify-content: center;
+
+  }
+
+  /*.form {
+    display: flex;
+    max-width: 50% !important;
+    margin-top: 50%;
+    justify-content: center;
+  }*/
+
+  .imput-res {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    margin: 0;
+    width: 90% !important;
+  }
+
+  .row {
+    display: none;
+  }
+
+  div[class^="col-5"] {
+    width: 500px;
+  }
+
+  .logo {
+    display: flex;
+    justify-content: center;
+    margin-top: none;
+    padding: 5px 100px; 
+    width: 290px !important;
+  }
+
+  .logo-index {
+    display: flex;
+    justify-content: center;
+    margin: 0  0 0 32px;
+  }
+  
+  .logo-res {
+    display: flex;
+    justify-content: center !important;
+    padding: 10px 50px;
+    margin: 80% 50% 100% 50%;
+    width: 380px !important;
+    height: 120px !important; 
+  }
+}
+
+
+/* Responsivo - Tablet */
+@media (max-width : 768px) {
+  .body {
+    display: flex;
+    background-color: #F2F2F2;
+    align-items: center;
+    overflow: hidden;
+  }
+
+  .div-res {
+    display: block;
+    background-color: #F2F2F2;
+    max-width: 20%;
+    border-radius: none;
+    border: none;
+  }
+
+  .welcome {
+    display: block;
+    max-width: 100% !important;
+    margin: 50% 60% 0;
+    padding-top: 10px;
+  }
+
+  .title-tablet {
+    font-size: 45px;
+    width: 340px;
+    margin-left: 40px;
+  }
+
+  .cad-tablet {
+    display: flex;
+    justify-content: center;
+    margin-left: 160px;
+    width: 350px;
+    padding-bottom: 5px;
+  }
+
+   /*.bemvindo-table {
+    width: 300px;    
+    margin: 0 0 0 10%;
+    padding-top: 20%;
+    padding-bottom: -10%;
+  }*/
+
+    .title-tablet-login {
+      font-size: 40px;
+      width: 340px;
+      margin-left: -30px;
+    }
+
+
+  h1.bemvindo-table {
+    font-size: 2em;
+  }
+
+  .p-tablet {
+    display: flex;
+    text-align: center;
+    font-size: 16px;
+    width: 250px;
+    margin-left: 80px;
+  }
+
+  .tables-row {
+    display: flex;
+    justify-content: center;
+    width: 650px;
+    padding-left: 50px;
+
+  }
+
+  .ilustra {
+    display: none;
+  }
+
+  .dev__res-table {
+    max-width: 100% !important;
+    margin: 0 50px;
+  }
+
+
+  .imput-table {
+    width: 100% !important;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
