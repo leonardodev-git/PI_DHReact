@@ -140,10 +140,11 @@ export default function Calendar() {
           <div className="col-10 px-lg-4">
             <div className="row  carrousel">
               <div className="col carrousel-professional">
-                <img src={professionalDetails.avatar} alt="barberShop" class="profilePhoto"></img>
+                <img src={professionalDetails.avatar} alt='barberShop' class='profilePhoto'/>
                 <h4> {professionalDetails.nome}</h4>
                 <small className="especialidade">Especialista em {professionalDetails.servicos[0]}</small> <br></br>
                 <button type="button" className="confirma">
+
                   <a href="/login/dashboard/confirmed">Confirmar</a>
                 </button>
               </div>
@@ -166,6 +167,7 @@ export default function Calendar() {
                 <img src={imgCarrousel4} alt="carousel" class="carousel-img"></img>
                 <p className="specialty">Corte Complexo</p>
                 <small className="specification">Corte simples de cabelo com remoção total dos fios</small>
+
               </div>
             </div>
             <div className="row schedule-area">
