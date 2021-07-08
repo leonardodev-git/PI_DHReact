@@ -4,7 +4,7 @@ import { useHistory } from "react-router-dom";
 import './UserModal.css'
 
 
-export default function ({isOpen, onClose, onUserUpdate}) {
+export default function ({isOpen, onClose}) {
   const [form, setForm] = useState({
     email: '',
     nome: '',
@@ -14,16 +14,14 @@ export default function ({isOpen, onClose, onUserUpdate}) {
   let history = useHistory();
 
   function handleChange({target}) {
-    const {id, value } = target;
+    const { id, value } = target;
     setForm({...form, [id]: value}) 
 } 
 
   const getCurrentUser = () => {
     return JSON.parse(localStorage.getItem("Token"));
   };
-  const user = getCurrentUser()
-
-
+  getCurrentUser()
   const onSubmit = async (e) => {
     e.preventDefault();
       const user = getCurrentUser()
@@ -35,7 +33,6 @@ export default function ({isOpen, onClose, onUserUpdate}) {
       },
       body: JSON.stringify(form),
     } )
-    const res = await tokenRes.json()
     history.push('/login/dashboard');
   }
 
@@ -77,9 +74,11 @@ export default function ({isOpen, onClose, onUserUpdate}) {
               onChange={handleChange}
               name="sobrenome"
             />
-          </div>          
-          <button className="alter" href="/login/dashboard">
-            <a>Concluir Alterações</a>
+          </div>
+          <button className="alter">
+            <a className="alter" href="/login/dashboard">
+              Concluir Alterações
+            </a>
           </button>
         </div>
       </form>
