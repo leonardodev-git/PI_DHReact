@@ -153,9 +153,7 @@ button>a {
     max-width: 20%;
     border-radius: none;
     border: none;
-  }
-
-  
+  }  
 
   h1.title-mob {
     display: flex;
@@ -242,7 +240,7 @@ button>a {
 
 
 /* Responsivo - Tablet */ 
-@media (max-width : 768px) {
+@media (max-width: 768px) {
   .body {
     display: flex;
     background-color: #F2F2F2;
@@ -298,6 +296,12 @@ button>a {
    .ilustra {
      display: none;
    }
+}
+
+
+@media(max-width: 1366px) {
+    
+
 }
 
 

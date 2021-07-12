@@ -86,14 +86,15 @@ export default function Dashboard() {
   return (
     <div className="body">
       <div className="container-fluid">
-        <div className="row">
-          <div className="col-xl-12 col-xs-4 navProfile">
+        <div className="row col-sm-6 all-mobile">
+          <div className="col-xl-12  navProfile navMobile">
             <img src={client2} alt="perfil" className="foto-perfil border-profile" />
-            <div className="nav-info  col-xl-12 col-xs-2">
-              <small className="boas-vindas col-xs-2">Bem vindo(a)!</small>
+            <div className="info-mobile col-sm-6 col-xl-12">
+              <small className="boas-vindas bemvindo-mobile col-xs-2">Bem vindo(a)!</small>
               {error}
-              <h2 className="cliente col-xs-2">{user.user}</h2>
+              <h2 className="cliente cliente-mobile col-sm-4 col-xs-2">{user.user}</h2>
               <p className="email">{user.email}</p>
+
               <ul className="list-group">
                 <li className="nav-lista">
                   <button className=" fa fa-home fa-fw  menu">Dashboard</button>
@@ -120,16 +121,16 @@ export default function Dashboard() {
             </div>
           </div>
 
-          <div className="col-7 px-lg-4">
+          <div className="col-xl-7 sm-6 px-lg-12 ">
             <div className="row barberInfo">
               <div>
-                <div className="shopBarbe">
-                  <img src={logoBarber} alt="barberShop" className="barberLogo"></img>
-                  <div className="col coluna-contato">
+                <div className="col-sm-12 shopBarbe">
+                  <img src={logoBarber} alt="barberShop" className=" barberLogo"></img>
+                  <div className="col col-lg-8 coluna-contato">
 
-  
-                    <div>
-                      <p className="welcome">
+
+                    <div className="col-sm-12">
+                      <p className="col-sm-12 welcome">
                         A Barbershop é uma barbearia com mais de 12 anos de serviços prestados e pode contar com os
                         melhores profissionais de São Paulo para te atender.
                       </p>
@@ -153,12 +154,12 @@ export default function Dashboard() {
             </div>
 
             {/*Profissionais*/}
-            <div className="row justify-content-around profissionais">
+            <div className="row col-sm-12 justify-content-around profissionais">
               {showInfo &&
                 professional.map((data, i) => {
                   return (
-                    <div className="col-4 professionalSchedule" key={i}>
-                      <img src={data.avatar} alt='perfil' className='fotoPerfil'/>
+                    <div className="col-6  professionalSchedule" key={i}>
+                      <img src={data.avatar} alt="perfil" className="fotoPerfil" />
                       <h5>{data.nome}</h5>
                       <p className="especialidade">Especialidade do Barbeiro</p>
                       <button className="input-agenda" type="button" onClick={() => getProfessionalID(data.id)}>
@@ -169,7 +170,7 @@ export default function Dashboard() {
                 })}
             </div>
           </div>
-          <div className="col-3 agendamentos">
+          <div className="col-3 agenda-mobile agendamentos">
             <p className="h2 tituloAgendamento">Meus Agendamentos</p>
             <p className="tomorrow">Amanhã</p>
 
@@ -182,7 +183,6 @@ export default function Dashboard() {
                   <div className="detalhe">
                     <img src={prof1} alt="" className="fotoAgendamento"></img>
                     <button type="button" className="input-agendamento">
-
                       Cancelar agendamento
                     </button>
                   </div>
@@ -227,7 +227,6 @@ export default function Dashboard() {
                   <div className="detalhe">
                     <img src={prof4} alt="" className="fotoAgendamento"></img>
                     <button type="button" className="input-agendamento">
-
                       Cancelar agendamento
                     </button>
                   </div>
@@ -249,7 +248,7 @@ export default function Dashboard() {
                   </div>
                 </div>
               </div>
-              
+
               {/*<span>Agendamento 6</span>*/}
               <p className="day-month">12 de março</p>
               <div className="row">

@@ -41,7 +41,7 @@ export default function Index() {
       <div className="container">
         <div className="row flex-wrap">
           <div className="col-7  welcome">
-            <h1 className="  title-mob title-tablet">Seja bem-vindo!</h1> <br />
+            <h1 className="title-mob title-tablet">Seja bem-vindo!</h1> <br />
             <p className="mobile-p p-tablet">
               Antes de tudo, efetue seu login. <br />
               Caso você ainda não possua um cadastro, pode criar um!
