@@ -86,7 +86,7 @@ export default function Dashboard() {
   return (
     <div className="body">
       <div className="container-fluid">
-        <div className="row col-sm-6 all-mobile">
+        <div className="row all-mobile">
           <div className="col-xl-12  navProfile navMobile">
             <img src={client2} alt="perfil" className="foto-perfil border-profile" />
             <div className="info-mobile col-sm-6 col-xl-12">
@@ -127,10 +127,8 @@ export default function Dashboard() {
                 <div className="col-sm-12 shopBarbe">
                   <img src={logoBarber} alt="barberShop" className=" barberLogo"></img>
                   <div className="col col-lg-8 coluna-contato">
-
-
-                    <div className="col-sm-12">
-                      <p className="col-sm-12 welcome">
+                    <div>
+                      <p className=" col-sm-12 welcome">
                         A Barbershop é uma barbearia com mais de 12 anos de serviços prestados e pode contar com os
                         melhores profissionais de São Paulo para te atender.
                       </p>
@@ -154,11 +152,11 @@ export default function Dashboard() {
             </div>
 
             {/*Profissionais*/}
-            <div className="row col-sm-12 justify-content-around profissionais">
+            <div className="row justify-content-around profissionais">
               {showInfo &&
                 professional.map((data, i) => {
                   return (
-                    <div className="col-6  professionalSchedule" key={i}>
+                    <div className="col-6 professionalSchedule" key={i}>
                       <img src={data.avatar} alt="perfil" className="fotoPerfil" />
                       <h5>{data.nome}</h5>
                       <p className="especialidade">Especialidade do Barbeiro</p>
