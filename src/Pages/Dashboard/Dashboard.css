@@ -426,6 +426,8 @@ li {
        margin-left: 100px;
        /*margin-bottom: 5px;*/
      }
+
+
      .cliente-mobile {
        margin-left: 100px;
        
@@ -445,17 +447,76 @@ li {
         margin-top: -25px;
         margin-right: 80px;
       }
+
+       .divwel-mobile {
+         display: block;
+         margin-bottom: 20%;
+         z-index: 30;
+       }
       
       .barberInfo {
         margin: auto;
         margin-top: 25px;
       }
 
-      .agenda-mobile {
-        display: -ms-flexbox;
-        max-width: 100% !important;
-        margin-top: 200%;
+      .mobile-contato{
+        display: block;
+        width: 100% !important;
+        margin-top: 50%;
       }
+
+      .prof-mobile {
+        margin-top: 100%;
+      }
+
+      .agenda-mobile {
+        display: block;
+        width: 100% !important;
+        margin-top: 50px;
+      }     
+
+      .mobile-info {
+        width: 110% !important;
+        justify-content: center;
+        height: 150px;
+        margin-top: 50px;
+      }
+
+      .logo-mobile {
+        display: block;
+        width: 35% !important;
+        height: none;
+        padding: none;
+        margin: 0% 50% 105% 2%; 
+        margin-left: -2%;      
+      }
+
+      .weldiv-mobile {
+        display: block;
+        width: 100%;
+        align-items: center;
+        margin-bottom: 20%;
+        z-index: 10;
+
+      }   
+
+
+      .wel-mobile {
+        display: block;
+        font-size: 0.5em;
+        text-align: center;
+        width: 100% !important;
+        margin-bottom: 20%;
+        margin-right: 20%;
+
+      }
+
+      
+
+
+
+
+
 
       .barbe-mobile {
         display: block; 
