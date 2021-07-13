@@ -124,11 +124,11 @@ export default function Dashboard() {
           <div className="col-xl-7 sm-6 px-lg-12 ">
             <div className="row barberInfo mobile-info">
               <div className="info-mobile">
-                <div className="col-sm-12 shopBarbe">
+                <div className="col-sm-12 shopBarbe barbe-mobile">
                   <img src={logoBarber} alt="barberShop" className=" barberLogo logo-mobile"></img>
                   <div className="col col-lg-8 coluna-contato mobile-contato">
                     <div className="weldiv-mobile">
-                      <div className="divwel-mobile">
+                      <div className="col-sm-12 divwel-mobile">
                         <p className=" col-sm-12 welcome wel-mobile">
                           A Barbershop é uma barbearia com mais de 12 anos de serviços prestados e pode contar com os
                           melhores profissionais de São Paulo para te atender.
