@@ -40,13 +40,13 @@ export default function Index() {
     <div className="body">
       <div className="container">
         <div className="row flex-wrap">
-          <div className="col-7 welcome">
-            <h1 className="titulo title-tablet">Seja bem-vindo!</h1> <br/>
+          <div className="col-7  welcome">
+            <h1 className="title-mob title-tablet">Seja bem-vindo!</h1> <br />
             <p className="mobile-p p-tablet">
-              Antes de tudo, efetue seu login. <br/>
+              Antes de tudo, efetue seu login. <br />
               Caso você ainda não possua um cadastro, pode criar um!
             </p>
-            <img className='ilustra' src={ilustracao} alt='Illustração'/>
+            <img className="ilustra" src={ilustracao} alt="Illustração" />
           </div>
           <div className="col-4 mw-100 div-form div-res">
             <div>
@@ -133,7 +133,7 @@ export default function Index() {
                   </div>
 
                   <div className="logo">
-                    <img src={logo} alt='logo do site' className='logotipo logo-res'/>
+                    <img src={logo} alt="logo do site" className="logotipo logo-mob logo-tab" />
                   </div>
                 </div>
               </form>

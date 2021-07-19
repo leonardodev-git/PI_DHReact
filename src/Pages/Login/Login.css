@@ -56,11 +56,13 @@ button {
   }
 
     .mob {
-      width: 1000px;
-      padding-top: 30%;
+      width: 500px;
+      font-size: 1.3em;
+      text-align: center;
+      margin-right: 20%;
+      padding-top: 20%;
       padding-bottom: -10%;
     }
-
 
   h1,
   p {
@@ -162,16 +164,10 @@ button {
   .title-tablet {
     font-size: 45px;
     width: 340px;
-    margin-left: 40px;
+    margin-left: 50px;
   }
 
-  .cad-tablet {
-    display: flex;
-    justify-content: center;
-    margin-left: 160px;
-    width: 350px;
-    padding-bottom: 5px;
-  }
+  
 
    /*.bemvindo-table {
     width: 300px;    
@@ -182,9 +178,14 @@ button {
 
     .title-tablet-login {
       font-size: 40px;
-      width: 340px;
-      margin-left: -30px;
+      width: 250px;
+      margin-left: 100px;
     }
+
+    .taby{
+      margin-left: 15%;
+    }
+
 
 
   h1.bemvindo-table {

@@ -17,8 +17,15 @@ h1 {
 }
 
 p {
-  font-size: 16px;
+  font-size: 16px;  
   margin-top: 10px;
+}
+
+.welcome {
+  display: block;
+  max-width: 125% !important;
+  margin-left: 20px;
+  padding-top: 10px;
 }
 
 .ilustra {
@@ -30,6 +37,7 @@ p {
   left: 0;
   overflow: hidden;
 }
+
 
 .cadastro {
   display: flex;
@@ -126,6 +134,8 @@ button>a {
   display: block;
 }
 
+/* /\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\ */
+
 
 /*Responsividade Mobile*/
 
@@ -143,37 +153,35 @@ button>a {
     max-width: 20%;
     border-radius: 0;
     border: none;
-  }
+  }  
 
-  .welcome {
-    display: block;
-    max-width: 100% !important;
-    margin: 50% 20% 0;
-    padding-top: 10px;
-  }
-
-  h1.titulo {
+  h1.title-mob {
     display: flex;
     text-align: center;
-    font-size: 30px;
-    width: 350px;
-    margin-left: 20px;
+    font-size: 25px;
+    width: 200px;
+    margin-left: -165px;
   }
 
-  p.mobile-p {
+   .mobile-p {
     display: flex;
     text-align: center;
     width: 250px;
-    margin-left: 50px;
+    margin-left: -195px;
     
-  }
+  } 
 
-  span.cad-mobile {
-    text-align: center;
-    font-size: 20px;
-    margin: auto;
-    padding: 0;
-  }
+
+   span.cad-mobile {
+     display: flex;
+     font-size: 1.1em;
+     text-align: center;
+     justify-content: center;
+     max-width: 100px !important;
+     margin-right: 235px;
+     padding-bottom: 5px;
+   }
+
   
   .mob-row {
     display: flex;
@@ -189,13 +197,7 @@ button>a {
     border: none;
   }
 
-  span.cad-mobile {
-    display: flex;
-    justify-content: center;
-    width: 200px;    
-    margin-right: 200px;
-    padding-bottom: 5px;
-  }
+ 
 
   .ilustra {
     display: none;
@@ -219,26 +221,28 @@ button>a {
     text-align: left;
   }
 
-  .logo {
+  .logo-mob {
     display: flex;
     justify-content: center;
-    margin-left: 100px;
-    padding: 5px 100px;
-    width: 290px !important;
+    margin-left: 50px;
+    padding: 10px 120px;
+    width: 200px !important;
   }
 
   .logotipo {
     display: flex;
-    justify-content: center;
-    padding: 5px 100px;
-    width: 200px !important;
-    height: 120px !important;
+    justify-content: center;    
+    padding: 5px 50px 20px 0;
+    width: 175px !important;
+    height: 100px !important;
   }
 }
 
+/* /\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\ */
+
 
 /* Responsivo - Tablet */ 
-@media (max-width : 768px) {
+@media (max-width: 768px) {
   .body {
     display: flex;
     background-color: #F2F2F2;
@@ -254,17 +258,17 @@ button>a {
     border: none;
   }
 
-  .welcome {
-    display: block;
-    max-width: 100% !important;
-    margin: 50% 20% 0;
-    padding-top: 10px;
-  }
 
-  .title-tablet {
-    font-size: 45px;
-    width: 340px;
-    margin-left: 40px;
+   .w_tab {
+     display: flex;
+     max-width: 50% !important;
+     padding-top: 10px;
+   }
+
+  h1.title-tablet {
+    font-size: 1.5em;
+    width: 150px;
+    margin-left: -80px;
   }
 
    .cad-tablet {
@@ -275,12 +279,12 @@ button>a {
      padding-bottom: 5px;
    }
 
-   .p-tablet {
+     p.p-tablet {
      display: flex;
      text-align: center;
-     font-size: 16px;
-     width: 250px;
-     margin-left: 80px;
+     font-size: 18px;
+     width: 260px;
+     margin-left: -200px;
    }
 
    .tables-row {
@@ -294,6 +298,12 @@ button>a {
    .ilustra {
      display: none;
    }
+}
+
+
+@media(max-width: 1366px) {
+    
+
 }
 
 

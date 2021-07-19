@@ -42,15 +42,14 @@ export default function Login() {
     <div className="body">
       <div className="container">
         <div className="row mob-row  tables-row">
-          <div className="col-7 welcome">
+          <div className="col-7">
             <div className="mob  table">
-              <h1 className="mob  title-tablet-login">Seja bem-vindo!</h1>
+              <h1 className="mob tablet-login">Seja bem-vindo!</h1>
             </div>
 
             <br></br>
             <br></br>
             <img className="ilustra" src={img} alt="Ilustração"></img>
-
           </div>
           <div className="col-5 col-sm mw-100 div-form div-res dev__res-table">
             <div>
