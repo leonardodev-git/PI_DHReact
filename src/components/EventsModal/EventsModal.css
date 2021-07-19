@@ -3,11 +3,9 @@
      justify-content: center;
      background-color: #ebebeb;
      margin: 300px 300px;
-     border: none;
      border-radius: 20px;
-     border-style: 1px solid;
      box-shadow: 0 0 1em #000000;
-     border-color: #000000;
+     border: none #000000;
 }
 
 
@@ -52,7 +50,7 @@ input {
      justify-content: center;
      width: 425px;
      height: 40px;
-     margin: none;
+     margin: 0;
      padding-top: 7px;
      border-radius: 10px;
      text-decoration: none;
@@ -65,7 +63,7 @@ input {
      justify-content: center;
      width: 425px;
      height: 40px;
-     margin: none;
+     margin: 0;
      padding-top: 7px;
      border-radius: 10px;
      text-decoration: none;

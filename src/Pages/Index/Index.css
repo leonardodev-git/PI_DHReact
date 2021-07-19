@@ -151,7 +151,7 @@ button>a {
     display: block;
     background-color: #F2F2F2;
     max-width: 20%;
-    border-radius: none;
+    border-radius: 0;
     border: none;
   }  
 
@@ -171,6 +171,7 @@ button>a {
     
   } 
 
+
    span.cad-mobile {
      display: flex;
      font-size: 1.1em;
@@ -180,6 +181,7 @@ button>a {
      margin-right: 235px;
      padding-bottom: 5px;
    }
+
   
   .mob-row {
     display: flex;
@@ -191,7 +193,7 @@ button>a {
     display: flex;
     background-color: #F2F2F2;
     max-width: 50%;
-    border-radius: none;
+    border-radius: 0;
     border: none;
   }
 
@@ -252,7 +254,7 @@ button>a {
     display: block;
     background-color: #F2F2F2;
     max-width: 20%;
-    border-radius: none;
+    border-radius: 0;
     border: none;
   }
 
