@@ -153,6 +153,8 @@ export default function Dashboard() {
             </div>
 
             {/*Profissionais*/}
+
+            
             <div className="row justify-content-around profissionais">
               {showInfo &&
                 professional.map((data, i) => {
