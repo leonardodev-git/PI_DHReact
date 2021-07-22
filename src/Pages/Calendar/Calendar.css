@@ -102,7 +102,7 @@
   padding: 100px;
   padding: 7px;
   border-radius: 10px;  
-  z-index: 20;
+  z-index: 0;
 }
 
 .to-schedule:hover {
@@ -270,6 +270,71 @@
   margin-bottom: 15px;
 }
 
+.pena {
+  text-align: center;
+  
+}
 
+/* Nav-bar-profile by mobile */
 
+@media(max-width: 1196px) {
+  body {
+    background-color: #F2F2F2;
+    box-sizing: border-box;
+  }
+  
+  .all-mobile {
+    display: flex;
+  }
+
+  div.navMobile {
+    display: flex;
+    width: 100%;
+    height: 10%;
+    margin: auto;
+    margin-top: 0px;
+    padding: auto;
+    background-color: black;
+    color: #FFC100;
+    z-index: 20;
+  }
+
+  .foto-perfil {
+    display: flex;
+    width: 100%;
+    height: 10%;
+    max-width: 15%;
+    border-radius: 50%;
+    margin-top: 0px;
+  }
+
+  .info-mobile {
+    height: 50px;
+    padding-bottom: 20px;
+   } 
+
+   .bemvindo-mobile {
+    display: flex;
+    margin-top: 5px;
+    font-size: 20px;
+    margin-left: 100px;
+  }
+
+  .cliente-mobile {
+    margin-left: 100px;
+    font-size: 20px;
+  }
+
+  .calendar {
+    display: block;
+    width: 100% !important;
+  }
+
+  .agendamentoMobile {
+      display: block;
+      width: 100% !important;
+      margin-top: 50px;
+       
+  }
+}
 

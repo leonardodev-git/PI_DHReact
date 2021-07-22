@@ -4,19 +4,23 @@ import Datetime from 'react-datetime';
 import './EventsModal.css';
 
 
+// eslint-disable-next-line import/no-anonymous-default-export
 export default function ({isOpen, onClose, onEventAdded}) {
   const [title, setTitle] = useState('');
   const [start, setStart] = useState(new Date());
   const [end, setEnd] = useState(new Date());
 
-  const onSubmit =  (e) => {
+  const onSubmit = async (e) => {
     e.preventDefault();
+    await fetch()
+
       onEventAdded({
         title,
         start,
         end,
     })
 
+    console.log(title)
       onClose();
   }
 

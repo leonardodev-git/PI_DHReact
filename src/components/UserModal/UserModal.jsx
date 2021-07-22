@@ -4,7 +4,9 @@ import { useHistory } from "react-router-dom";
 import './UserModal.css'
 
 
+// eslint-disable-next-line import/no-anonymous-default-export
 export default function ({isOpen, onClose}) {
+  const [info, setInfo] = useState('')
   const [form, setForm] = useState({
     email: '',
     nome: '',
@@ -22,6 +24,7 @@ export default function ({isOpen, onClose}) {
     return JSON.parse(localStorage.getItem("Token"));
   };
   getCurrentUser()
+
   const onSubmit = async (e) => {
     e.preventDefault();
       const user = getCurrentUser()
@@ -33,16 +36,20 @@ export default function ({isOpen, onClose}) {
       },
       body: JSON.stringify(form),
     } )
-    history.push('/login/dashboard');
+    const response = await tokenRes.json()
+    setInfo(response.front)
+    history.push('/login/dashboard')  
   }
 
   return (
     <Modal isOpen={isOpen} onRequestClose={onClose} className="corpo">
-      <form onSubmit={onSubmit}>
+      <div className="form">
+      <form onSubmit={onSubmit}> 
         <div className="form-ajust">
           <h1 className="dados">Altere seus dados!</h1>
+            {info}
           <div className="ident">
-            <label className="space" htmlFor="">
+            <label className="space" htmlFor="email">
               Email:
             </label>
             <input
@@ -54,16 +61,15 @@ export default function ({isOpen, onClose}) {
               name="email"
             />
           </div>
-
           <div className="ident">
-            <label className="space" htmlFor="">
+            <label className="space" htmlFor="nome">
               Nome:
             </label>
             <input className="escreva" type="text" id="nome" value={form.nome} onChange={handleChange} name="nome" />
           </div>
 
           <div className="ident">
-            <label className="space" htmlFor="">
+            <label className="space" htmlFor="sobrenome">
               Sobrenome:
             </label>
             <input
@@ -75,13 +81,12 @@ export default function ({isOpen, onClose}) {
               name="sobrenome"
             />
           </div>
-          <button className="alter">
-            <a className="alter" href="/login/dashboard">
-              Concluir Alterações
-            </a>
-          </button>
+          <button className="alter" onClick={() => onSubmit}> 
+               Concluir Alterações
+           </button>
         </div>
       </form>
+      </div>
     </Modal>
   )
 }

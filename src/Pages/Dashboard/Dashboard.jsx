@@ -1,5 +1,4 @@
 import client2 from '../../Assets/cliente-2.png'
-import barberShop from '../../Assets/barberShop.jpg'
 import logoBarber from '../../Assets/logotipo_barbershop.svg'
 import prof1 from '../../Assets/funcionarios/julia-ramos.jpg'
 import prof2 from '../../Assets/funcionarios/jonas-lobo.jpg'
@@ -20,6 +19,7 @@ export default function Dashboard() {
   const [showInfo, setShowInfo] = useState(false)
   const [error, setError] = useState('')
   const [modalOpen, setModalOpen] = useState()
+  const [info, setInfo] = useState('')
 
   let history = useHistory()
 
@@ -50,7 +50,7 @@ export default function Dashboard() {
     setProfessional(content.allProfissionals)
   }
 
-  async function handleDelete() {
+  const handleDelete = async () =>  {
     const user = getCurrentUser()
     const tokenRes = await fetch(`http://localhost:5000/users`, {
       method: 'DELETE',
@@ -59,9 +59,11 @@ export default function Dashboard() {
         'x-access-token': user.acessToken,
       },
     })
-    const success = await tokenRes.json()
-    setError(success.message)
     setTimeout(() => history.push('/'), 5000)
+    const success = await tokenRes.json()
+    console.log(success)
+    setError(success.message)
+    setInfo(success.front)
   }
 
   async function getProfessionalID(id) {
@@ -78,6 +80,7 @@ export default function Dashboard() {
     localStorage.setItem('Professional', JSON.stringify(content.professionalDetails))
     history.push('/login/dashboard/calendar')
   }
+
   function logOut() {
     localStorage.removeItem('Token')
   }
@@ -105,7 +108,7 @@ export default function Dashboard() {
                   </button>{' '}
                 </li>
                 <li className="nav-lista">
-                  <button className=" fa fa-bell fa-fw  menu" onClick={handleDelete}>
+                  <button className=" fa fa-bell fa-fw  menu" onClick={() => handleDelete()}>
                     Deletar Conta
                   </button>
                 </li>
@@ -150,6 +153,7 @@ export default function Dashboard() {
               </div>
             </div>
             <div className="row disponiveis">
+              <h1 className="pena">{info}</h1>
               <h2 className="prof">Profissionais Disponíveis</h2>
             </div>
 
@@ -314,6 +318,7 @@ export default function Dashboard() {
           </div>
         </div>
       </div>
+    
     </div>
   )
 }

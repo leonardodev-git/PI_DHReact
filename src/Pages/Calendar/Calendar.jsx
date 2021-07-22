@@ -1,6 +1,5 @@
 import './Calendar.css'
 import client2 from '../../Assets/cliente-2.png'
-import img from '../../Assets/imagem.png'
 import FullCalendar from '@fullcalendar/react'
 import dayGridPlugin from '@fullcalendar/daygrid'
 import interactionPlugin from '@fullcalendar/interaction'
@@ -24,10 +23,10 @@ import { Link, useHistory } from 'react-router-dom'
 import moment from 'moment'
 
 export default function Calendar() {
-  const [professional, setProfessional] = useState({})
   const [modalOpen, setModalOpen] = useState()
   const [modalOpenUser, setModalOpenUser] = useState()
-  const [error, setError] = useState('')
+  const [_, setError] = useState('')
+  const [info, setInfo] = useState('')
   const calendarRef = useRef(null)
 
   let history = useHistory()
@@ -89,9 +88,10 @@ export default function Calendar() {
         'x-access-token': user.acessToken,
       },
     })
+    setTimeout(() => history.push('/'), 5000)
     const success = await tokenRes.json()
     setError(success.message)
-    setTimeout(() => history.push('/'), 5000)
+    setInfo(success.front)
   }
 
    function logOut() {
@@ -102,12 +102,12 @@ export default function Calendar() {
   return (
     <div className="body">
       <div class="container-fluid">
-        <div className="row">
-          <div className="col-2 navProfile">
+        <div className="row all-mobile">
+          <div className="col-xl-12 navProfile navMobile">
             <img src={client2} alt="perfil" className="foto-perfil" />
-            <div class="nav-info">
-              <small class="boas-vindas">Bem vindo(a)!</small>
-              <h2 className="cliente">{user.user}</h2>
+            <div class="nav-info info-mobile ">
+              <small class="boas-vindas bemvindo-mobile">Bem vindo(a)!</small>
+              <h2 className="cliente cliente-mobile">{user.user}</h2>
               <p className="email">{user.email}</p>
               <ul class="list-group">
 
@@ -171,7 +171,8 @@ export default function Calendar() {
               </div>
             </div>
             <div className="row schedule-area">
-              <div className="col-8">
+              <div className="col-8 agendamentoMobile">
+                <h1 className="pena">{info}</h1>
                 <div className="schedule-to">
                   <button onClick={() => setModalOpen(true)} className="to-schedule">
                     Faça seu agendamento
@@ -193,7 +194,7 @@ export default function Calendar() {
                   onEventAdded={(e) => onEventAdded(e)}
                 />
               </div>
-              <div className="col-4 agendamento">
+              <div className="col-4 agendamento agendamentoMobile">
                 <p className="h2 tituloAgendamento">Meus Agendamentos</p>
                 <p className="tomorrow">Amanhã</p>
 

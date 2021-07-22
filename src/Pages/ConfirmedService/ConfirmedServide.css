@@ -87,7 +87,9 @@ a {
 .prof-contrat {
   display: flex;
   justify-content: center;
-
+  background-color:rgba(0,0,0,0.7);
+  border-radius: 20px;
+  padding: 5%;
 }
 
 .service-type {
@@ -96,7 +98,7 @@ a {
   text-align: center;
 }
 
-
-
-
-
+.agradecimento {
+  margin-top: 10px;
+  text-align: center;
+}

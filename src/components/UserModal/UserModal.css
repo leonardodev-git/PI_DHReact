@@ -1,16 +1,15 @@
 .corpo {
-     display: flex;
-     justify-content: center;     
      background-color: #ebebeb;
-     margin: 300px 300px;
      border-radius:20px;
      box-shadow: 0 0 1em #000000;
      border: none #000000;
+     margin: 5% auto !important;
+     width: 50%;
+     height: 75vh;
 }
 
-
 .ident {
-     font-size: 20px;
+     font-size: 50px;
      padding-right: 100px;
      text-align: right;
 }

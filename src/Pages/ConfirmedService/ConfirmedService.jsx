@@ -1,5 +1,3 @@
-import client2 from '../../Assets/cliente-2.png'
-import img from '../../Assets/imagem.png'
 import './ConfirmedServide.css'
 import payPal from '../../Assets/paypal.svg'
 import sucess from '../../Assets/pay-sucess.svg'
@@ -16,14 +14,11 @@ export default function confirm() {
   return (
     <div className="body body-confirmed">
       <div className="container-fluid">
-        <div className="row div-row">
-          <div className="col-md-5   medium container-confirm">
-            <div className="form form-login">
-              <div className="cadastro">
-                <img src={img} alt="foto_perfil" className="perfil-img" />
-              </div>
-              <div className="row prof-contrat">
-                <h2 className="profissa color-world">Mariana Silva</h2>
+        <div className="row">
+        <div className="col-md-6 offset-md-3">
+              <div className="form form-login">
+               <div className="row prof-contrat">
+                <h2 className="profissa color-world">{user.user}</h2>
                 <div className="type-service">
                   <div className="sucess">
                     <h6 className="service-sched">Serviço Agendado</h6>
@@ -53,7 +48,7 @@ export default function confirm() {
               </div>
             </div>
           </div>
-        </div>
+      </div>
       </div>
     </div>
   )
