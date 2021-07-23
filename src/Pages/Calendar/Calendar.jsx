@@ -42,40 +42,12 @@ export default function Calendar() {
   const professionalDetails = getProfessionalDetails()
 
   const onEventAdded = async (e) => {
-    // const event = await fetch('localhost:5000/servico', {
-    //   method: 'POST',
-    //   headers: {
-    //     'Content-Type': 'application/json',
-    //   },
-    //   body: JSON.stringify(calendarApi),
-    // })
+
     let calendarApi = calendarRef.current.getApi()
     calendarApi.addEvent({
       start: moment(e.start).toDate(),
       end: moment(e.end).toDate(),
       title: e.title,
-    })
-
-    console.log(calendarApi)
-  }
-
-  async function handleEnventAdd(data) {
-    // const event = await fetch('localhost:5000/servico', {
-    //   method: 'POST',
-    //   headers: {
-    //     'Content-Type': 'application/json',
-    //   },
-    //   body: JSON.stringify(),
-    // })
-  }
-
-  async function handleDataSet(data) {
-    const tokenRes = await fetch('rota que será criada para os agendamentos', {
-      method: 'GET',
-      headers: {
-        'Content-Type': 'application/json',
-      },
-      body: JSON.stringify(),
     })
   }
 
@@ -184,14 +156,13 @@ export default function Calendar() {
                     plugins={[dayGridPlugin, interactionPlugin]}
                     initialView="dayGridMonth"
                     weekends={false}
-                    eventAdd={(e) => handleEnventAdd(e)}
                   />
                 </div>
 
                 <EventsModal
                   isOpen={modalOpen}
                   onClose={() => setModalOpen(false)}
-                  onEventAdded={(e) => onEventAdded(e)}
+                  onEventAdded={e => onEventAdded(e)}
                 />
               </div>
               <div className="col-4 agendamento agendamentoMobile">

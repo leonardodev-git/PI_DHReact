@@ -12,18 +12,28 @@ export default function ({isOpen, onClose, onEventAdded}) {
 
   const onSubmit = async (e) => {
     e.preventDefault();
-    await fetch()
-
-      onEventAdded({
-        title,
-        start,
-        end,
-    })
-
-    console.log(title)
-      onClose();
+    const event = {
+      start,
+      end,
+      title,
+    }
+  const getCurrentUser = () => {
+    return JSON.parse(localStorage.getItem('Token'))
   }
 
+  const user = getCurrentUser()
+
+      onEventAdded(await fetch('http://localhost:5000/agendamento', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+          'x-access-token': user.acessToken,
+        },
+        body: JSON.stringify(event)
+      }))
+      onClose();
+    }
+    
 
   return (
     <Modal isOpen={isOpen} onRequestClose={onClose} className="corpo">
@@ -34,17 +44,17 @@ export default function ({isOpen, onClose, onEventAdded}) {
             className="serviço"
             placeholder="Agendamento"
             value={title}
-            onChange={(e) => setTitle(e.target.value)}
+            onChange={(e) => setTitle(e.target.value)} 
           />
 
           <div>
             <label htmlFor="">Data Inicial</label>
-            <Datetime value={start} onChange={(date) => setStart(date)} className="serviço" />
+            <Datetime initialValue={start} onChange={(date) => setStart(date.format('YYYY-MM-DD HH:mm:ss'))} className="serviço" initialViewDate={start}/>
           </div>
 
           <div>
             <label htmlFor="">Data Final</label>
-            <Datetime value={end} onChange={(date) => setEnd(date)} className="serviço" />
+            <Datetime initialValue={end} onChange={(date) => setEnd(date.format('YYYY-MM-DD HH:mm:ss'))} className="serviço" initialViewDate={end} closeOnClickOutside={false}/>
           </div>
           <button className="concluir">Concluir Agendamento</button>
         </div>
