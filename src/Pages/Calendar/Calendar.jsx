@@ -16,7 +16,7 @@ import prof6 from '../../Assets/funcionarios/joao-marcos.jpg'
 import prof7 from '../../Assets/funcionarios/guilherme-totoli.jpg'
 import prof8 from '../../Assets/funcionarios/renato-napoli.jpg'
 import prof9 from '../../Assets/funcionarios/eduardo-amorim.jpg'
-import { useRef, useState } from 'react'
+import { useRef, useState, useEffect } from 'react'
 import EventsModal from '../../components/EventsModal/EventsModal'
 import UserModal from '../../components/UserModal/UserModal'
 import { Link, useHistory } from 'react-router-dom'
@@ -27,6 +27,7 @@ export default function Calendar() {
   const [modalOpenUser, setModalOpenUser] = useState()
   const [_, setError] = useState('')
   const [info, setInfo] = useState('')
+  const [event, setEvent] = useState({})
   const calendarRef = useRef(null)
 
   let history = useHistory()
@@ -42,14 +43,18 @@ export default function Calendar() {
   const professionalDetails = getProfessionalDetails()
 
   const onEventAdded = async (e) => {
+    
 
+  }
+
+  useEffect(() => {
     let calendarApi = calendarRef.current.getApi()
     calendarApi.addEvent({
-      start: moment(e.start).toDate(),
-      end: moment(e.end).toDate(),
-      title: e.title,
+      start: moment(event.start).toDate(),
+      end: moment(event.end).toDate(),
+      title: event.title,
     })
-  }
+  }, [event])
 
   async function handleDelete() {
     const user = getCurrentUser()
@@ -95,9 +100,6 @@ export default function Calendar() {
                   <button className=" fa fa-bell fa-fw  menu" onClick={handleDelete}>
                     Deletar Conta
                   </button>
-
-
-                  
                 </li>
               </ul>
               <UserModal isOpen={modalOpenUser} onClose={() => setModalOpenUser(false)} />
@@ -162,7 +164,8 @@ export default function Calendar() {
                 <EventsModal
                   isOpen={modalOpen}
                   onClose={() => setModalOpen(false)}
-                  onEventAdded={e => onEventAdded(e)}
+                  onEventAdded={(e) => onEventAdded(e)}
+                  setData={ e => setEvent(e)}
                 />
               </div>
               <div className="col-4 agendamento agendamentoMobile">

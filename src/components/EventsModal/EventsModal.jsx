@@ -5,7 +5,7 @@ import './EventsModal.css';
 
 
 // eslint-disable-next-line import/no-anonymous-default-export
-export default function ({isOpen, onClose, onEventAdded}) {
+export default function ({isOpen, onClose, onEventAdded, setData}) {
   const [title, setTitle] = useState('');
   const [start, setStart] = useState(new Date());
   const [end, setEnd] = useState(new Date());
@@ -22,6 +22,8 @@ export default function ({isOpen, onClose, onEventAdded}) {
   }
 
   const user = getCurrentUser()
+
+  setData(event)
 
       onEventAdded(await fetch('http://localhost:5000/agendamento', {
         method: 'POST',
