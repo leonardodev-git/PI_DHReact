@@ -61,7 +61,6 @@ export default function Dashboard() {
     })
     setTimeout(() => history.push('/'), 5000)
     const success = await tokenRes.json()
-    console.log(success)
     setError(success.message)
     setInfo(success.front)
   }
